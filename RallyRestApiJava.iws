@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d13ef47-0a67-4459-b2c8-b61b80a31c6e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/UpdateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/UpdateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/GetRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/GetRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Fetch.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Fetch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" afterPath="$PROJECT_DIR$/doc/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" afterPath="$PROJECT_DIR$/doc/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/GetRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/GetRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/Response.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/Response.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/class-use/RallyRestApi.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/class-use/RallyRestApi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Fetch.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Fetch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/QueryFilter.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/QueryFilter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/Request.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/Request.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/serialized-form.html" afterPath="$PROJECT_DIR$/doc/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-summary.html" afterPath="$PROJECT_DIR$/doc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/QueryRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/QueryRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/CreateRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/CreateRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/QueryFilter.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/QueryFilter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/deprecated-list.html" afterPath="$PROJECT_DIR$/doc/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/DeleteRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/DeleteRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-frame.html" afterPath="$PROJECT_DIR$/doc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/GetRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/GetRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/QueryResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/QueryResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/CreateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/CreateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/UpdateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/UpdateResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-13.html" afterPath="$PROJECT_DIR$/doc/index-files/index-13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/UpdateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/UpdateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/CreateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/CreateResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Ref.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Ref.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/Response.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/Response.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/QueryRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/QueryRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-tree.html" afterPath="$PROJECT_DIR$/doc/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/RallyRestApi.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/RallyRestApi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" afterPath="$PROJECT_DIR$/doc/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/DeleteResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/DeleteResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Ref.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Ref.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" afterPath="$PROJECT_DIR$/doc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" afterPath="$PROJECT_DIR$/doc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/DeleteRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/DeleteRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/DeleteResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/DeleteResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/Request.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/Request.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/UpdateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/UpdateResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/CreateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/CreateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/CreateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/CreateResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/constant-values.html" afterPath="$PROJECT_DIR$/doc/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/GetResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/GetResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RallyRestApiJava.iws" afterPath="$PROJECT_DIR$/RallyRestApiJava.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/doc/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/help-doc.html" afterPath="$PROJECT_DIR$/doc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/DeleteRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/DeleteRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/GetResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/GetResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/Request.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/Request.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/QueryResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/QueryResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" />
+    </list>
+    <ignored path="RallyRestApiJava.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="RallyRestApiJava" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="DeleteResponseTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/rallydev/rest/response/DeleteResponseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="31" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3376206">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/Request.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/package-info.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/package-info.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" />
+        <option value="$PROJECT_DIR$/examples/com/rallydev/rest/RestApiFactory.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="435" />
+    <option name="y" value="22" />
+    <option name="width" value="1332" />
+    <option name="height" value="1081" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RallyRestApiJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RallyRestApiJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RallyRestApiJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RallyRestApiJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.proportion" value="0.109144576" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="project.structure.side.proportion" value="0.20971309" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rallydev.rest.request" />
+      <recent name="com.rallydev.rest.response" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/rallydev/rest/request" />
+      <recent name="$PROJECT_DIR$/src/com/rallydev/rest/response" />
+      <recent name="$PROJECT_DIR$/src/com/rallydev/rest/util" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/test" />
+      <recent name="$PROJECT_DIR$/lib/src" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration default="false" name="RallyRestApiMain" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="RallyRestApiMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RallyRestApiJava" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CrudExample" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rallydev.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.rest.CrudExample" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RallyRestApiJava" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="QueryExample" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rallydev.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.rest.QueryExample" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RallyRestApiJava" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeleteResponseTest.shouldReturnErrors" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rallydev.rest.response.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RallyRestApiJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.rallydev.rest.response" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.rest.response.DeleteResponseTest" />
+      <option name="METHOD_NAME" value="shouldReturnErrors" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="&lt;default&gt;" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="RallyRestApiJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" class_name="" method_name="" output_log_level="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="RallyRestApiJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.RallyRestApiMain" />
+      <item index="1" class="java.lang.String" itemvalue="Application.CrudExample" />
+      <item index="2" class="java.lang.String" itemvalue="Application.QueryExample" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.DeleteResponseTest.shouldReturnErrors" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="false">$USER_HOME$/.subversion_IDEA</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d13ef47-0a67-4459-b2c8-b61b80a31c6e" name="Default" comment="" />
+      <created>1335544963818</created>
+      <updated>1335544963818</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="435" y="22" width="1332" height="1081" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Buildr" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36511627" sideWeight="0.99937224" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32604167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682737" sideWeight="0.45104167" order="1" side_tool="true" content_ui="tabs" x="471" y="1037" width="349" height="280" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682737" sideWeight="0.21770833" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32395834" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="4" selection-start="1246" selection-end="1345" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="621" selection-end="761" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/request/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="33" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="32" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="53" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/util/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="80" selection-start="1775" selection-end="1775" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="328" column="103" selection-start="11963" selection-end="11963" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/com/rallydev/rest/RestApiFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="54" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/com/rallydev/rest/QueryExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="40" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="21" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="22" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RallyRestApiJava.ipr">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/com/rallydev/rest/CrudExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="55" selection-start="1615" selection-end="1615" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/rallydev/rest/response/DeleteResponseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3376206">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>RallyRestApiJava:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20971309" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20971309" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>activesupport (v3.1.3, RVM: jruby-1.6.7 [alm-tool-guitest]) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20971309" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20971309" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>RallyRestApiJava</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20971309" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mockito-all-1.9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20971309" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
