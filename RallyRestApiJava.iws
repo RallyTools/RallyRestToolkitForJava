@@ -8,93 +8,93 @@
   <component name="ChangeListManager">
     <list default="true" id="5d13ef47-0a67-4459-b2c8-b61b80a31c6e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/UpdateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/UpdateRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/GetRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/GetRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Fetch.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Fetch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" afterPath="$PROJECT_DIR$/doc/index-files/index-12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" afterPath="$PROJECT_DIR$/doc/allclasses-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/GetRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/GetRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/Response.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/Response.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/class-use/RallyRestApi.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/class-use/RallyRestApi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Fetch.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Fetch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/QueryFilter.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/QueryFilter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/Request.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/Request.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-use.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/serialized-form.html" afterPath="$PROJECT_DIR$/doc/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-summary.html" afterPath="$PROJECT_DIR$/doc/overview-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/QueryRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/QueryRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/CreateRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/CreateRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/QueryFilter.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/QueryFilter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/deprecated-list.html" afterPath="$PROJECT_DIR$/doc/deprecated-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/DeleteRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/DeleteRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-frame.html" afterPath="$PROJECT_DIR$/doc/overview-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/GetRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/GetRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/QueryResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/QueryResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/CreateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/CreateRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/UpdateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/UpdateResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-13.html" afterPath="$PROJECT_DIR$/doc/index-files/index-13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/UpdateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/UpdateRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/CreateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/CreateResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Ref.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Ref.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/Response.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/Response.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/QueryRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/QueryRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-tree.html" afterPath="$PROJECT_DIR$/doc/overview-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/RallyRestApi.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/RallyRestApi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" afterPath="$PROJECT_DIR$/doc/index-files/index-11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/DeleteResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/DeleteResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Ref.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Ref.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" afterPath="$PROJECT_DIR$/doc/index-files/index-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" afterPath="$PROJECT_DIR$/doc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/GetResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/GetResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/CreateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/CreateResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" afterPath="$PROJECT_DIR$/doc/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-frame.html" afterPath="$PROJECT_DIR$/doc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Ref.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Ref.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-tree.html" afterPath="$PROJECT_DIR$/doc/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/CreateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/CreateResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/CreateRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/CreateRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/QueryFilter.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/QueryFilter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/constant-values.html" afterPath="$PROJECT_DIR$/doc/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/CreateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/CreateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/DeleteRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/DeleteRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/DeleteRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/DeleteRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/QueryFilter.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/QueryFilter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/deprecated-list.html" afterPath="$PROJECT_DIR$/doc/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/DeleteRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/DeleteRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/help-doc.html" afterPath="$PROJECT_DIR$/doc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/UpdateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/UpdateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/QueryRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/QueryRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" afterPath="$PROJECT_DIR$/doc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/Request.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/Request.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/QueryRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/QueryRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/GetRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/GetRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-13.html" afterPath="$PROJECT_DIR$/doc/index-files/index-13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" afterPath="$PROJECT_DIR$/doc/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/RallyRestApi.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/RallyRestApi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/GetResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/GetResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/Response.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/Response.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/DeleteResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/DeleteResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-frame.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/serialized-form.html" afterPath="$PROJECT_DIR$/doc/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/QueryResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/QueryResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Ref.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Ref.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/Request.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/Request.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/Response.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/Response.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/DeleteResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/DeleteResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/class-use/RallyRestApi.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/class-use/RallyRestApi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Fetch.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/class-use/Fetch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/QueryResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/Request.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/Request.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RallyRestApiJava.iws" afterPath="$PROJECT_DIR$/RallyRestApiJava.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/overview-summary.html" afterPath="$PROJECT_DIR$/doc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/QueryResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/QueryResponse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" afterPath="$PROJECT_DIR$/doc/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/UpdateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/UpdateRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Fetch.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/Fetch.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/UpdateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/UpdateResponse.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/CreateRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/CreateRequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-summary.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/CreateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/CreateResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/constant-values.html" afterPath="$PROJECT_DIR$/doc/constant-values.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/GetResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/GetResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RallyRestApiJava.iws" afterPath="$PROJECT_DIR$/RallyRestApiJava.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/GetRequest.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/GetRequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/doc/allclasses-noframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/help-doc.html" afterPath="$PROJECT_DIR$/doc/help-doc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-tree.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/package-tree.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/DeleteRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/DeleteRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/GetResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/class-use/GetResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/Request.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/request/class-use/Request.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/QueryResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/QueryResponse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/response/UpdateResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-use.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/util/package-use.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" afterPath="$PROJECT_DIR$/doc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/rallydev/rest/request/GetRequest.java" afterPath="$PROJECT_DIR$/src/com/rallydev/rest/request/GetRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/com/rallydev/rest/response/UpdateResponse.html" afterPath="$PROJECT_DIR$/doc/com/rallydev/rest/response/UpdateResponse.html" />
     </list>
     <ignored path="RallyRestApiJava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,13 +152,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DeleteResponseTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DeleteResponseTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/rallydev/rest/response/DeleteResponseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3376206">
+            <state line="14" column="31" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RallyRestApi.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="37" selection-start="2143" selection-end="2143" vertical-scroll-proportion="0.81632656">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package-info.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/package-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.MF" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="25" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="257" column="33" selection-start="7228" selection-end="7228" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryRequestTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/rallydev/rest/request/QueryRequestTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="29" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-10.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,9 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" />
-        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/Request.java" />
-        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/UpdateRequest.java" />
         <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java" />
         <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/DeleteResponse.java" />
         <option value="$PROJECT_DIR$/src/com/rallydev/rest/response/GetResponse.java" />
@@ -190,8 +241,11 @@
         <option value="$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java" />
         <option value="$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java" />
         <option value="$PROJECT_DIR$/src/com/rallydev/rest/util/Ref.java" />
-        <option value="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" />
         <option value="$PROJECT_DIR$/examples/com/rallydev/rest/RestApiFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java" />
+        <option value="$PROJECT_DIR$/test/com/rallydev/rest/request/QueryRequestTest.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java" />
       </list>
     </option>
   </component>
@@ -237,6 +291,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RallyRestApiJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -251,30 +315,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RallyRestApiJava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RallyRestApiJava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.109144576" />
     <property name="OverrideImplement.combined" value="true" />
@@ -286,12 +330,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -311,51 +355,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.&lt;default&gt;">
-    <configuration default="false" name="RallyRestApiMain" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="RallyRestApiMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="RallyRestApiJava" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CrudExample" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.rallydev.rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.rallydev.rest.CrudExample" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="RallyRestApiJava" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="QueryExample" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
@@ -449,6 +448,80 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="QueryRequestTest" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rallydev.rest.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RallyRestApiJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.rallydev.rest.request" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.rest.request.QueryRequestTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="QueryRequestTest.shouldCreateCorrectQueryWithSpecifiedOrder" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rallydev.rest.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="RallyRestApiJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.rallydev.rest.request" />
+      <option name="MAIN_CLASS_NAME" value="com.rallydev.rest.request.QueryRequestTest" />
+      <option name="METHOD_NAME" value="shouldCreateCorrectQueryWithSpecifiedOrder" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" value="" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59270" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -474,26 +547,6 @@
       </option>
       <option name="moduleName" value="" />
       <option name="trusted" value="true" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Buildr.BeforeRunTask" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="RakeTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -529,6 +582,26 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -589,11 +662,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.RallyRestApiMain" />
-      <item index="1" class="java.lang.String" itemvalue="Application.CrudExample" />
-      <item index="2" class="java.lang.String" itemvalue="Application.QueryExample" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.DeleteResponseTest.shouldReturnErrors" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+      <item index="0" class="java.lang.String" itemvalue="Application.QueryExample" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.DeleteResponseTest.shouldReturnErrors" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.QueryRequestTest" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.QueryRequestTest.shouldCreateCorrectQueryWithSpecifiedOrder" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -653,9 +726,10 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Buildr" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36511627" sideWeight="0.99937224" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36458334" sideWeight="0.99937224" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -663,14 +737,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32604167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682737" sideWeight="0.45104167" order="1" side_tool="true" content_ui="tabs" x="471" y="1037" width="349" height="280" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2674961" sideWeight="0.3875" order="1" side_tool="true" content_ui="tabs" x="471" y="1037" width="349" height="280" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682737" sideWeight="0.21770833" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32395834" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2674961" sideWeight="0.28229168" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32291666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -709,7 +782,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -734,26 +807,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="4" selection-start="1246" selection-end="1345" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/CreateResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="621" selection-end="761" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/request/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="33" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/response/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="32" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/util/Fetch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="53" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" />
@@ -769,11 +822,6 @@
         <state line="56" column="80" selection-start="1775" selection-end="1775" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="103" selection-start="11963" selection-end="11963" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/com/rallydev/rest/RestApiFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="54" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" />
@@ -787,11 +835,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/util/QueryFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="21" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RallyRestApiJava.ipr">
@@ -811,10 +854,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/rallydev/rest/response/DeleteResponseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3376206">
+        <state line="14" column="31" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/request/QueryRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="33" selection-start="7228" selection-end="7228" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/rallydev/rest/request/QueryRequestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="29" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="25" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rallydev/rest/RallyRestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="37" selection-start="2143" selection-end="2143" vertical-scroll-proportion="0.81632656">
+          <folding />
         </state>
       </provider>
     </entry>

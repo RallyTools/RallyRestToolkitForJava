@@ -35,11 +35,18 @@ public class QueryRequestTest {
     }
 
     @Test
-    public void shouldCreateCorrectQueryWithOrder() {
+    public void shouldCreateCorrectQueryWithDefaultOrder() {
 
         QueryRequest q = new QueryRequest("Defect");
-        q.setOrder("Rank ASC");
-        Assert.assertTrue(q.toUrl().contains("order=Rank+ASC"));
+        Assert.assertTrue(q.toUrl().contains("order=ObjectID"));
+    }
+
+    @Test
+    public void shouldCreateCorrectQueryWithSpecifiedOrder() {
+
+        QueryRequest q = new QueryRequest("Defect");
+        q.setOrder("Name");
+        Assert.assertTrue(q.toUrl().contains("order=Name%2CObjectID"));
     }
 
     @Test

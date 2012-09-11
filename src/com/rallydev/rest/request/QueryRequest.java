@@ -252,7 +252,12 @@ public class QueryRequest extends Request implements Cloneable {
         params.add(new BasicNameValuePair("start", Integer.toString(getStart())));
         params.add(new BasicNameValuePair("pagesize", Integer.toString(getPageSize())));
         params.add(new BasicNameValuePair("fetch", fetch.toString()));
-        params.add(new BasicNameValuePair("order", getOrder()));
+
+        String order = getOrder();
+        if(!order.contains("ObjectID")) {
+            order += ",ObjectID";
+        }
+        params.add(new BasicNameValuePair("order", order));
 
         if (getWorkspace() != null && getWorkspace().length() > 0) {
             params.add(new BasicNameValuePair("workspace", Ref.getRelativeRef(getWorkspace())));
