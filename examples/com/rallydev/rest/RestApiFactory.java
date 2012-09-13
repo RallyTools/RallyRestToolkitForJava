@@ -9,7 +9,7 @@ public class RestApiFactory {
     private static final String SERVER = "https://rally1.rallydev.com";
     
     //Specify your WSAPI version
-    private static final String WSAPI_VERSION = "1.33";
+    private static final String WSAPI_VERSION = "1.37";
     
     //Specify your Rally username
     private static final String USERNAME = "YOUR_USERNAME";

@@ -48,7 +48,7 @@ public class RallyRestApi implements Closeable {
     /**
      * The default version of the WSAPI to target.
      */
-    public static final String DEFAULT_WSAPI_VERSION = "1.33";
+    public static final String DEFAULT_WSAPI_VERSION = "1.37";
 
     protected URI server;
     protected URI proxy;
@@ -57,10 +57,10 @@ public class RallyRestApi implements Closeable {
     protected DefaultHttpClient httpClient;
     protected Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v1.0.1");
+            put(Header.Library, "Rally Rest API for Java v1.0.2");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "1.0.1");
+            put(Header.Version, "1.0.2");
         }
     };
 

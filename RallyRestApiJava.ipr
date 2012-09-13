@@ -14,11 +14,11 @@
           <element id="module-output" name="RallyRestApiJava" />
         </element>
         <element id="library" level="project" name="commons-logging-1.1.1" />
-        <element id="library" level="project" name="httpclient-4.1.3" />
-        <element id="library" level="project" name="httpclient-cache-4.1.3" />
-        <element id="library" level="project" name="commons-codec-1.4" />
-        <element id="library" level="project" name="httpcore-4.1.4" />
         <element id="library" level="project" name="gson-2.1" />
+        <element id="library" level="project" name="commons-codec-1.6" />
+        <element id="library" level="project" name="httpclient-4.2.1" />
+        <element id="library" level="project" name="httpclient-cache-4.2.1" />
+        <element id="library" level="project" name="httpcore-4.2.1" />
       </root>
     </artifact>
   </component>
@@ -62,7 +62,7 @@
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
     <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
     <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="-link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs -link http://docs.oracle.com/javase/6/docs/api -windowtitle &quot;Rally Rest API for Java 1.0.1&quot; -doctitle &quot;Rally Rest API for Java 1.0.1&quot;" />
+    <option name="OTHER_OPTIONS" value="-link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs -link http://docs.oracle.com/javase/6/docs/api -windowtitle &quot;Rally Rest API for Java 1.0.2&quot; -doctitle &quot;Rally Rest API for Java 1.0.2&quot;" />
     <option name="HEAP_SIZE" />
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="false" />
@@ -212,9 +212,9 @@
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
-    <library name="commons-codec-1.4">
+    <library name="commons-codec-1.6">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/commons-codec-1.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/commons-codec-1.6.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -233,23 +233,23 @@
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="httpclient-4.1.3">
+    <library name="httpclient-4.2.1">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-4.1.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-4.2.1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="httpclient-cache-4.1.3">
+    <library name="httpclient-cache-4.2.1">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-cache-4.1.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-cache-4.2.1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="httpcore-4.1.4">
+    <library name="httpcore-4.2.1">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/httpcore-4.1.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpcore-4.2.1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
