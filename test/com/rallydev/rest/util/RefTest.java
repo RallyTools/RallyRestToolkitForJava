@@ -91,4 +91,10 @@ public class RefTest {
         Assert.assertNull(Ref.getOidFromRef(""), "Empty ref");
         Assert.assertNull(Ref.getOidFromRef(null), "null ref");
     }
+
+    @Test
+    public void shouldSupportWsapiVersionXinRefs() {
+        Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/x/portfolioitem/feature/1234"), "/portfolioitem/feature/1234", "Valid absolute version x dynatype ref");
+        Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/x/defect/1234"), "/defect/1234", "Valid absolute version x ref");
+    }
 }
