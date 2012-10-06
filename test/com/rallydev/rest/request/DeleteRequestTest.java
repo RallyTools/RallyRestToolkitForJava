@@ -7,7 +7,7 @@ public class DeleteRequestTest {
     
     @Test
     public void shouldConstructCorrectUrlWithAbsoluteRef() {
-        DeleteRequest req = new DeleteRequest("https://rally1.rallydev.com/slm/webservice/x/defect/1234.js");
+        DeleteRequest req = new DeleteRequest("https://rally1.rallydev.com/slm/webservice/1.32/defect/1234.js");
         Assert.assertEquals(req.toUrl(), "/defect/1234.js");
     }
 

@@ -8,7 +8,7 @@ public class GetRequestTest {
     
     @Test
     public void shouldReturnCorrectUrlWithAbsoluteRef() {
-        GetRequest req = new GetRequest("https://rally1.rallydev.com/slm/webservice/x/defect/1234.js");
+        GetRequest req = new GetRequest("https://rally1.rallydev.com/slm/webservice/1.32/defect/1234.js");
         Assert.assertEquals(req.toUrl(), "/defect/1234.js?fetch=true");
     }
 
@@ -20,7 +20,7 @@ public class GetRequestTest {
 
     @Test
     public void shouldReturnCorrectUrlWithFetchParams() {
-        GetRequest req = new GetRequest("https://rally1.rallydev.com/slm/webservice/x/defect/1234.js");
+        GetRequest req = new GetRequest("https://rally1.rallydev.com/slm/webservice/1.32/defect/1234.js");
         req.setFetch(new Fetch("Name", "Description"));
         Assert.assertEquals(req.toUrl(), "/defect/1234.js?fetch=Name%2CDescription");
     }
