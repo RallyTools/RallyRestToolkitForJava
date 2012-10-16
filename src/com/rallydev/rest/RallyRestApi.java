@@ -57,10 +57,10 @@ public class RallyRestApi implements Closeable {
     protected DefaultHttpClient httpClient;
     protected Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v1.0.3");
+            put(Header.Library, "Rally Rest API for Java v1.0.4");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "1.0.3");
+            put(Header.Version, "1.0.4");
         }
     };
 
@@ -141,7 +141,7 @@ public class RallyRestApi implements Closeable {
      * @throws IOException if an error occurs during the creation.
      */
     public CreateResponse create(CreateRequest request) throws IOException {
-        return new CreateResponse(doPut(buildWsapiUrl() + request.toUrl(), request.getBody()));
+        return new CreateResponse(doPost(buildWsapiUrl() + request.toUrl(), request.getBody()));
     }
 
     /**

@@ -1,9 +1,9 @@
 Manifest-Version: 1.2
 Name: com/rallydev/rest/
 Specification-Title: "Rally Rest API for Java" 
-Specification-Version: "1.0.3"
+Specification-Version: "1.0.4"
 Specification-Vendor: "Rally Software, Inc."
 Implementation-Title: "com.rallydev.rest" 
-Implementation-Version: "1.0.3"
+Implementation-Version: "1.0.4"
 Implementation-Vendor: "Rally Software, Inc."
 Class-Path: httpcore-4.2.1.jar httpclient-4.2.1.jar commons-logging-1.1.1.jar commons-codec-1.6.jar httpclient-cache-4.2.1.jar gson-2.1.jar

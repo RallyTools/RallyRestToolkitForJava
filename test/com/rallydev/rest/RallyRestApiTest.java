@@ -57,7 +57,7 @@ public class RallyRestApiTest {
         CreateRequest request = new CreateRequest("defect", newDefect);
         CreateResponse createResponse = apiSpy.create(request);
         
-        verify(apiSpy).doPut(api.buildWsapiUrl() + request.toUrl(), request.getBody());
+        verify(apiSpy).doPost(api.buildWsapiUrl() + request.toUrl(), request.getBody());
         Assert.assertTrue(createResponse.wasSuccessful());
         JsonObject createdObj = createResponse.getObject();
         Assert.assertEquals(createdObj.get("_ref").getAsString(), "/defect/1234.js");
