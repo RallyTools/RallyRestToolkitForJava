@@ -12,6 +12,12 @@ public class QueryFilterTest {
     }
 
     @Test
+    public void shouldCreateCorrectQueryForNull() {
+        QueryFilter q = new QueryFilter("Foo", "=", null);
+        Assert.assertEquals(q.toString(), "(Foo = null)", "Null value query correct");
+    }
+
+    @Test
      public void shouldCreateQuotedQueryForStringWithSpaces() {
         QueryFilter q = new QueryFilter("Foo", "=", "Bar Baz");
         Assert.assertEquals(q.toString(), "(Foo = \"Bar Baz\")", "String value with spaces query correct");
