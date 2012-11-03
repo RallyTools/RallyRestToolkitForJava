@@ -57,10 +57,10 @@ public class RallyRestApi implements Closeable {
     protected DefaultHttpClient httpClient;
     protected Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v1.0.4");
+            put(Header.Library, "Rally Rest API for Java v1.0.5");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "1.0.4");
+            put(Header.Version, "1.0.5");
         }
     };
 
