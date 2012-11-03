@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  */
 public class Ref {
 
-    private static Pattern refPattern = Pattern.compile(".*?/((?:/*\\w{2,}){1,2})/(\\d+)(?:\\.js\\??.*)*$");
+    private static Pattern refPattern = Pattern.compile(".*?/((?:/*\\w{2,}){1,2})/(\\d+(?:u\\d+w\\d)*)(?:\\.js\\??.*)*$");
     
     private static Matcher match(String ref) {
         return refPattern.matcher(ref != null ? ref : "");    

@@ -97,4 +97,11 @@ public class RefTest {
         Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/x/portfolioitem/feature/1234"), "/portfolioitem/feature/1234", "Valid absolute version x dynatype ref");
         Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/x/defect/1234"), "/defect/1234", "Valid absolute version x ref");
     }
+
+    @Test
+    public void shouldSupportWorkspacePermissionRefs() {
+        Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/1.38/workspacepermission/123u456w1"), "/workspacepermission/123u456w1", "Valid workspace permission ref");
+        Assert.assertEquals(Ref.getOidFromRef("/workspacepermission/123u456w1.js"), "123u456w1", "Get oid from workspace permission ref");
+        Assert.assertEquals(Ref.getTypeFromRef("/workspacepermission/123u456w1.js"), "workspacepermission", "Get type from workspace permission ref");
+    }
 }
