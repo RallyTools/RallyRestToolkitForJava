@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RefTest {
-    
+
     @Test
     public void shouldDetectValidRefs() {
         Assert.assertTrue(Ref.isRef("/defect/1234"), "Valid relative ref");
@@ -84,7 +84,7 @@ public class RefTest {
         Assert.assertEquals(Ref.getOidFromRef("/portfolioitem/feature/1234.js"), "1234", "Relative ref with extension");
         Assert.assertEquals(Ref.getOidFromRef("https://rally1.rallydev.com/slm/webservice/1.32/portfolioitem/feature/1234"), "1234", "Valid absolute ref");
     }
-    
+
     @Test
     public void shouldReturnNullOidsFromRefs() {
         Assert.assertNull(Ref.getOidFromRef("blah"), "Not a ref");
@@ -103,5 +103,12 @@ public class RefTest {
         Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/1.38/workspacepermission/123u456w1"), "/workspacepermission/123u456w1", "Valid workspace permission ref");
         Assert.assertEquals(Ref.getOidFromRef("/workspacepermission/123u456w1.js"), "123u456w1", "Get oid from workspace permission ref");
         Assert.assertEquals(Ref.getTypeFromRef("/workspacepermission/123u456w1.js"), "workspacepermission", "Get type from workspace permission ref");
+    }
+
+    @Test
+    public void shouldSupportProjectPermissionRefs() {
+        Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/1.38/projectpermission/123u456p1"), "/projectpermission/123u456p1", "Valid project permission ref");
+        Assert.assertEquals(Ref.getOidFromRef("/projectpermission/123u456p1.js"), "123u456p1", "Get oid from project permission ref");
+        Assert.assertEquals(Ref.getTypeFromRef("/projectpermission/123u456p1.js"), "projectpermission", "Get type from project permission ref");
     }
 }
