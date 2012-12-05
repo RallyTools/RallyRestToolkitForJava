@@ -19,7 +19,9 @@ public class GetRequest extends Request {
 
     /**
      * Create a new get request for the specified object.
+     *
      * @param ref the ref of the WSAPI object to be retrieved.  May be absolute or relative, e.g. "/defect/12345"
+     *            May also be "/user" or "/subscription" to get the current instances
      */
     public GetRequest(String ref) {
         this.ref = ref;
@@ -54,7 +56,20 @@ public class GetRequest extends Request {
     public String toUrl() {
         List<NameValuePair> params = new ArrayList<NameValuePair>(getParams());
         params.add(new BasicNameValuePair("fetch", fetch.toString()));
-        return String.format("%s.js?%s", Ref.getRelativeRef(ref),
+        return String.format("%s.js?%s", getEndpoint(),
                 URLEncodedUtils.format(params, "utf-8"));
+    }
+
+    protected String getEndpoint() {
+        String endpoint = ref.toLowerCase();
+        if (Ref.isRef(endpoint)) {
+            endpoint = Ref.getRelativeRef(endpoint);
+        } else if (endpoint.contains("user")) {
+            endpoint = "/user";
+        } else if (endpoint.contains("subscription")) {
+            endpoint = "/subscription";
+        }
+
+        return endpoint;
     }
 }

@@ -127,4 +127,20 @@ public class QueryRequestTest {
         Assert.assertEquals(q.toUrl(), q2.toUrl());
 
     }
+
+    @Test
+    public void shouldCreateCorrectUrlForSubscription() {
+
+        QueryRequest q = new QueryRequest("Subscription");
+
+        Assert.assertEquals(q.toUrl(), "/subscriptions.js?start=1&pagesize=200&fetch=true&order=ObjectID");
+    }
+
+    @Test
+    public void shouldCreateCorrectUrlForUser() {
+
+        QueryRequest q = new QueryRequest("User");
+
+        Assert.assertEquals(q.toUrl(), "/users.js?start=1&pagesize=200&fetch=true&order=ObjectID");
+    }
 }

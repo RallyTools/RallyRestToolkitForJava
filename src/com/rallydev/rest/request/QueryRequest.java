@@ -275,7 +275,15 @@ public class QueryRequest extends Request implements Cloneable {
             params.add(new BasicNameValuePair("query", getQueryFilter().toString()));
         }
 
-        return "/" + type.toLowerCase().replaceAll(" ", "") + ".js?" +
+        return getTypeEndpoint() + "?" +
                 URLEncodedUtils.format(params, "utf-8");
+    }
+    
+    protected String getTypeEndpoint() {
+        String typeEndpoint = type.toLowerCase().replaceAll(" ", "");
+        if(typeEndpoint.equals("subscription") || typeEndpoint.equals("user")) {
+            typeEndpoint += "s";
+        }
+        return "/" + typeEndpoint + ".js";
     }
 }
