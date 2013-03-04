@@ -2,6 +2,7 @@ package com.rallydev.rest.request;
 
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
+import org.apache.http.client.utils.URLEncodedUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,14 @@ public class QueryRequestTest {
         QueryRequest q = new QueryRequest("Defect");
         q.addParam("foo", "Bar");
         Assert.assertEquals(q.toUrl(), "/defect.js?foo=Bar&start=1&pagesize=200&fetch=true&order=ObjectID");
+    }
+
+    @Test
+    public void shouldEncodeParamsUsingUtf8() {
+
+        QueryRequest q = new QueryRequest("Defect");
+        q.addParam("foo", "备");
+        Assert.assertTrue(q.toUrl().contains(URLEncodedUtils.format(q.getParams(), "utf-8")));
     }
 
     @Test

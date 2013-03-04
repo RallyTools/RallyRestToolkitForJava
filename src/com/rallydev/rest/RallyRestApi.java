@@ -48,7 +48,7 @@ public class RallyRestApi implements Closeable {
     /**
      * The default version of the WSAPI to target.
      */
-    public static final String DEFAULT_WSAPI_VERSION = "1.37";
+    public static final String DEFAULT_WSAPI_VERSION = "1.40";
 
     protected URI server;
     protected URI proxy;
@@ -57,10 +57,10 @@ public class RallyRestApi implements Closeable {
     protected DefaultHttpClient httpClient;
     protected Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v1.0.6");
+            put(Header.Library, "Rally Rest API for Java v1.0.7");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "1.0.6");
+            put(Header.Version, "1.0.7");
         }
     };
 
@@ -253,7 +253,7 @@ public class RallyRestApi implements Closeable {
         HttpResponse response = httpClient.execute(request);
         if (response.getStatusLine().getStatusCode() == 200) {
             HttpEntity entity = response.getEntity();
-            return EntityUtils.toString(entity);
+            return EntityUtils.toString(entity, "utf-8");
         } else {
             throw new IOException(response.getStatusLine().toString());
         }
@@ -272,7 +272,7 @@ public class RallyRestApi implements Closeable {
      */
     protected String doPost(String url, String body) throws IOException {
         HttpPost httpPost = new HttpPost(url);
-        httpPost.setEntity(new StringEntity(body));
+        httpPost.setEntity(new StringEntity(body, "utf-8"));
         return doRequest(httpPost);
     }
 
@@ -289,7 +289,7 @@ public class RallyRestApi implements Closeable {
      */
     protected String doPut(String url, String body) throws IOException {
         HttpPut httpPut = new HttpPut(url);
-        httpPut.setEntity(new StringEntity(body));
+        httpPut.setEntity(new StringEntity(body, "utf-8"));
         return doRequest(httpPut);
     }
 

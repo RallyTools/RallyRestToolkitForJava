@@ -13,9 +13,13 @@ import com.rallydev.rest.response.DeleteResponse;
 import com.rallydev.rest.response.GetResponse;
 import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.response.UpdateResponse;
+import org.apache.http.Header;
+import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
 import org.apache.http.client.methods.HttpRequestBase;
+import org.mockito.ArgumentMatcher;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import static org.mockito.Mockito.*;
 
 import java.io.IOException;
@@ -23,14 +27,14 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class RallyRestApiTest {
-    
+
     private RallyRestApi createApi() throws URISyntaxException {
-        return new RallyRestApi(new URI("https://someServer.rallydev.com"), "username", "password");    
+        return new RallyRestApi(new URI("https://someServer.rallydev.com"), "username", "password");
     }
-    
+
     @Test
     public void shouldReturnCorrectWsapiUrl() throws URISyntaxException {
-        RallyRestApi api = createApi();  
+        RallyRestApi api = createApi();
         Assert.assertEquals(api.buildWsapiUrl(), "https://someServer.rallydev.com/slm/webservice/" + RallyRestApi.DEFAULT_WSAPI_VERSION);
         api.setWsapiVersion("1.99");
         Assert.assertEquals(api.buildWsapiUrl(), "https://someServer.rallydev.com/slm/webservice/1.99");
@@ -41,26 +45,50 @@ public class RallyRestApiTest {
         RallyRestApi api = createApi();
 
         JsonObject response = new JsonObject();
-        JsonObject createResult = new JsonObject();       
+        JsonObject createResult = new JsonObject();
         response.add("CreateResult", createResult);
         createResult.add("Errors", new JsonArray());
         createResult.add("Warnings", new JsonArray());
         JsonObject object = new JsonObject();
         object.addProperty("_ref", "/defect/1234.js");
         createResult.add("Object", object);
-        
+
         RallyRestApi apiSpy = spy(api);
         doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
-        
+
         JsonObject newDefect = new JsonObject();
         newDefect.addProperty("Name", "Foo");
         CreateRequest request = new CreateRequest("defect", newDefect);
         CreateResponse createResponse = apiSpy.create(request);
-        
+
         verify(apiSpy).doPost(api.buildWsapiUrl() + request.toUrl(), request.getBody());
         Assert.assertTrue(createResponse.wasSuccessful());
         JsonObject createdObj = createResponse.getObject();
         Assert.assertEquals(createdObj.get("_ref").getAsString(), "/defect/1234.js");
+    }
+
+    @Test
+    public void shouldCorrectlyEncodePutInUtf8() throws URISyntaxException, IOException {
+        RallyRestApi api = createApi();
+        JsonObject response = new JsonObject();
+
+        RallyRestApi apiSpy = spy(api);
+        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
+
+        apiSpy.doPut("url", "body");
+        verify(apiSpy).doRequest(argThat(new HttpRequestUtf8Matcher()));
+    }
+
+    @Test
+    public void shouldCorrectlyEncodePostInUtf8() throws URISyntaxException, IOException {
+        RallyRestApi api = createApi();
+        JsonObject response = new JsonObject();
+
+        RallyRestApi apiSpy = spy(api);
+        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
+
+        apiSpy.doPost("url", "body");
+        verify(apiSpy).doRequest(argThat(new HttpRequestUtf8Matcher()));
     }
 
     @Test
@@ -141,7 +169,7 @@ public class RallyRestApiTest {
         RallyRestApi apiSpy = spy(api);
         doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
 
-        QueryRequest request = new QueryRequest("Defect"); 
+        QueryRequest request = new QueryRequest("Defect");
         request.setPageSize(1);
         QueryResponse queryResponse = apiSpy.query(request);
 
@@ -260,7 +288,7 @@ public class RallyRestApiTest {
         verify(apiSpy).doGet(requestUrl.replace("start=5", "start=9"));
         verify(apiSpy).doGet(requestUrl.replace("start=5", "start=10"));
     }
-    
+
     private JsonObject buildQueryResponse(int totalResultCount) {
         JsonObject response = new JsonObject();
         JsonObject queryResult = new JsonObject();
@@ -270,5 +298,16 @@ public class RallyRestApiTest {
         queryResult.add("Results", new JsonArray());
         queryResult.addProperty("TotalResultCount", totalResultCount);
         return response;
+    }
+
+    class HttpRequestUtf8Matcher extends ArgumentMatcher<HttpEntityEnclosingRequestBase> {
+        public boolean matches(Object o) {
+            if (o instanceof HttpEntityEnclosingRequestBase) {
+                HttpEntityEnclosingRequestBase h = (HttpEntityEnclosingRequestBase) o;
+                Header contentType = h.getEntity().getContentType();
+                return contentType.getValue().toLowerCase().contains("utf-8");
+            }
+            return false;
+        }
     }
 }

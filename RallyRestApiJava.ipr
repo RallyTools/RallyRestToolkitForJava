@@ -7,7 +7,7 @@
     <artifact build-on-make="true" name="RallyRestApiJava:jar">
       <output-path>$PROJECT_DIR$/out/artifacts</output-path>
       <root id="root">
-        <element id="archive" name="rally-rest-api-1.0.6.jar">
+        <element id="archive" name="rally-rest-api-1.0.7.jar">
           <element id="directory" name="META-INF">
             <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
           </element>
@@ -37,7 +37,11 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -62,7 +66,7 @@
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
     <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
     <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="-link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs -link http://docs.oracle.com/javase/6/docs/api -windowtitle &quot;Rally Rest API for Java 1.0.6&quot; -doctitle &quot;Rally Rest API for Java 1.0.6&quot;" />
+    <option name="OTHER_OPTIONS" value="-link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs -link http://docs.oracle.com/javase/6/docs/api -windowtitle &quot;Rally Rest API for Java 1.0.7&quot; -doctitle &quot;Rally Rest API for Java 1.0.7&quot;" />
     <option name="HEAP_SIZE" />
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="false" />
