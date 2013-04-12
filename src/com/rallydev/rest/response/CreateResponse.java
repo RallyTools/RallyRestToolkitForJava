@@ -1,6 +1,7 @@
 package com.rallydev.rest.response;
 
 import com.google.gson.JsonObject;
+import com.rallydev.rest.RallyRestApi;
 
 /**
  * Represents a WSAPI response from creating an object 
@@ -23,7 +24,7 @@ public class CreateResponse extends Response {
      */
     @Override
     protected String getRoot() {
-        return "CreateResult";
+        return RallyRestApi.CREATE_RESULT_KEY;
     }
 
     /**

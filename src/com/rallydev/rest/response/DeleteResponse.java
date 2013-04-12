@@ -1,5 +1,7 @@
 package com.rallydev.rest.response;
 
+import static com.rallydev.rest.RallyRestApi.OPERATION_RESULT_KEY;
+
 /**
  * Represents a WSAPI response from deleting an object
  */
@@ -21,6 +23,6 @@ public class DeleteResponse extends Response {
      */
     @Override
     protected String getRoot() {
-        return "OperationResult";
+        return OPERATION_RESULT_KEY;
     }
 }

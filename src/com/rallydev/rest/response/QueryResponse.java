@@ -2,6 +2,8 @@ package com.rallydev.rest.response;
 
 import com.google.gson.JsonArray;
 
+import static com.rallydev.rest.RallyRestApi.QUERY_RESULT_KEY;
+
 /**
  * Represents a WSAPI response from querying for objects.
  */
@@ -23,7 +25,7 @@ public class QueryResponse extends Response {
      */
     @Override
     protected String getRoot() {
-        return "QueryResult";
+        return QUERY_RESULT_KEY;
     }
 
     /**

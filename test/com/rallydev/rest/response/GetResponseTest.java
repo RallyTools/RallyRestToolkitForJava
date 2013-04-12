@@ -4,10 +4,12 @@ import com.google.gson.Gson;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static com.rallydev.rest.RallyRestApi.OPERATION_RESULT_KEY;
+
 public class GetResponseTest {
     
     private GetResponse createResponse(String[] errors) {
-        return new GetResponse("{\"" + (errors.length > 0 ? "OperationResult": "Defect") +
+        return new GetResponse("{\"" + (errors.length > 0 ? OPERATION_RESULT_KEY: "Defect") +
                 "\": { \"Errors\": " + new Gson().toJson(errors) + ", \"Foo\": \"Bar\"}}");
     }
 

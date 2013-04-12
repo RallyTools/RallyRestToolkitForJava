@@ -2,6 +2,8 @@ package com.rallydev.rest.response;
 
 import com.google.gson.JsonObject;
 
+import static com.rallydev.rest.RallyRestApi.OPERATION_RESULT_KEY;
+
 /**
  * Represents a WSAPI response from updating an object.
  */
@@ -23,7 +25,7 @@ public class UpdateResponse extends Response {
      */
     @Override
     protected String getRoot() {
-        return "OperationResult";
+        return OPERATION_RESULT_KEY;
     }
 
     /**
