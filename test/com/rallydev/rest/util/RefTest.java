@@ -111,4 +111,12 @@ public class RefTest {
         Assert.assertEquals(Ref.getOidFromRef("/projectpermission/123u456p1.js"), "123u456p1", "Get oid from project permission ref");
         Assert.assertEquals(Ref.getTypeFromRef("/projectpermission/123u456p1.js"), "projectpermission", "Get type from project permission ref");
     }
+    
+    @Test
+    public void shouldSupportCollectionRefs() {
+        Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/1.38/defect/1234/tasks"), "/defect/1234/tasks", "Valid collection ref");
+        Assert.assertEquals(Ref.getRelativeRef("/defect/1234/tasks"), "/defect/1234/tasks", "Valid relative collection ref");
+        Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/1.38/portfolioitem/feature/1234/children"), "/portfolioitem/feature/1234/children", "Valid dynatype collection ref");
+        Assert.assertEquals(Ref.getRelativeRef("/portfolioitem/feature/1234/children"), "/portfolioitem/feature/1234/children", "Valid dynatype relative collection ref");
+    }
 }

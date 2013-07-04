@@ -1,5 +1,6 @@
 package com.rallydev.rest.request;
 
+import com.google.gson.JsonObject;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
 import org.apache.http.client.utils.URLEncodedUtils;
@@ -151,5 +152,14 @@ public class QueryRequestTest {
         QueryRequest q = new QueryRequest("User");
 
         Assert.assertEquals(q.toUrl(), "/users.js?start=1&pagesize=200&fetch=true&order=ObjectID");
+    }
+    
+    @Test
+    public void shouldCreateCorrectUrlForCollection() {
+        JsonObject collection = new JsonObject();
+        collection.addProperty("_ref", "/defect/1234/tasks");
+        
+        QueryRequest q = new QueryRequest(collection);
+        Assert.assertEquals(q.toUrl(), "/defect/1234/tasks?start=1&pagesize=200&fetch=true&order=ObjectID");
     }
 }

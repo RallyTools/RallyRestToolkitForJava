@@ -49,13 +49,13 @@ public class RallyRestApi implements Closeable {
         Library,
         Name,
         Vendor,
-        Version;
-
+        Version
     }
+
     /**
      * The default version of the WSAPI to target.
      */
-    public static final String DEFAULT_WSAPI_VERSION = "1.42";
+    public static final String DEFAULT_WSAPI_VERSION = "v2.0";
     public static final String CREATE_RESULT_KEY = "CreateResult";
     public static final String OPERATION_RESULT_KEY = "OperationResult";
     public static final String QUERY_RESULT_KEY = "QueryResult";
@@ -75,10 +75,10 @@ public class RallyRestApi implements Closeable {
 
     protected Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v1.0.7");
+            put(Header.Library, "Rally Rest API for Java v2.0");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "1.0.7");
+            put(Header.Version, "2.0");
         }
     };
 
@@ -255,17 +255,6 @@ public class RallyRestApi implements Closeable {
     }
 
     /**
-     * Get the specified object. Forces basic auth as part of the request
-     *
-     * @param request the {@link GetRequest} specifying the object to be retrieved.
-     * @return the resulting {@link GetResponse}
-     * @throws IOException if an error occurs during the retrieval.
-     */
-    public GetResponse getWithForceReauth(GetRequest request) throws IOException {
-        return get(request, true);
-    }
-
-    /**
      * Get the specified object. Forces basic auth as part of the request if specified
      *
      * @param request     the {@link GetRequest} specifying the object to be retrieved.
@@ -273,7 +262,7 @@ public class RallyRestApi implements Closeable {
      * @return the resulting {@link GetResponse}
      * @throws IOException if an error occurs during the retrieval.
      */
-    private GetResponse get(GetRequest request, boolean forceReauth) throws IOException {
+    protected GetResponse get(GetRequest request, boolean forceReauth) throws IOException {
         return new GetResponse(doGet(buildWsapiUrl() + request.toUrl(), forceReauth));
     }
 
@@ -314,7 +303,6 @@ public class RallyRestApi implements Closeable {
      *                     problem occurs while executing the request
      */
     protected String doRequest(HttpRequestBase request) throws IOException {
-        //Set the headers
         for (Map.Entry<Header, String> header : headers.entrySet()) {
             request.setHeader("X-RallyIntegration" + header.getKey().name(), header.getValue());
         }
@@ -355,12 +343,16 @@ public class RallyRestApi implements Closeable {
      * @throws IOException if a non-200 response code is returned or if some other
      *                     problem occurs while executing the request
      */
-    private String doSecurityEnableRequest(HttpRequestBase request) throws IOException {
-        try {
-            attachSecurityInfo(request);
-        } catch (URISyntaxException e) {
-            throw new IOException("Unable to build URI with security token", e);
+    private String doSecuredRequest(HttpRequestBase request) throws IOException {
+        if (!request.getMethod().equals(HttpGet.METHOD_NAME) &&
+                !this.getWsapiVersion().matches("^1[.]\\d+")) {
+            try {
+                attachSecurityInfo(request);
+            } catch (URISyntaxException e) {
+                throw new IOException("Unable to build URI with security token", e);
+            }
         }
+
         return doRequest(request);
     }
 
@@ -378,7 +370,7 @@ public class RallyRestApi implements Closeable {
         if (!SECURITY_ENDPOINT_DOES_NOT_EXIST.equals(securityToken)) {
             try {
                 if (securityToken == null) {
-                    GetResponse getResponse = getWithForceReauth(new GetRequest(SECURITY_TOKEN_URL));
+                    GetResponse getResponse = get(new GetRequest(SECURITY_TOKEN_URL), true);
                     JsonObject operationResult = getResponse.getObject();
                     JsonPrimitive securityTokenPrimitive = operationResult.getAsJsonPrimitive(SECURITY_TOKEN_KEY);
                     securityToken = securityTokenPrimitive.getAsString();
@@ -422,8 +414,9 @@ public class RallyRestApi implements Closeable {
     protected String doPost(String url, String body) throws IOException {
         HttpPost httpPost = new HttpPost(url);
         httpPost.setEntity(new StringEntity(body, "utf-8"));
-        return doSecurityEnableRequest(httpPost);
+        return doSecuredRequest(httpPost);
     }
+    
 
     /**
      * Perform a put against the WSAPI
@@ -437,7 +430,7 @@ public class RallyRestApi implements Closeable {
     protected String doPut(String url, String body) throws IOException {
         HttpPut httpPut = new HttpPut(url);
         httpPut.setEntity(new StringEntity(body, "utf-8"));
-        return doSecurityEnableRequest(httpPut);
+        return doSecuredRequest(httpPut);
     }
 
     /**
@@ -450,7 +443,7 @@ public class RallyRestApi implements Closeable {
      */
     protected String doDelete(String url) throws IOException {
         HttpDelete httpDelete = new HttpDelete(url);
-        return doSecurityEnableRequest(httpDelete);
+        return doSecuredRequest(httpDelete);
     }
 
     /**

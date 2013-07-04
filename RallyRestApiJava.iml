@@ -41,6 +41,9 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" name="httpclient-4.2.5" level="project" />
+    <orderEntry type="library" name="httpcore-4.2.4" level="project" />
   </component>
 </module>
 

@@ -71,15 +71,15 @@ public class RallyRestApiTest {
         RallyRestApi apiSpy = spy(new RallyRestApi(server, "username", "password"));
 
         InvalidURLException exception = new InvalidURLException("invalid url");
-        doThrow(exception).when(apiSpy).getWithForceReauth(any(GetRequest.class));
+        doThrow(exception).when(apiSpy).get(any(GetRequest.class), eq(true));
         HttpRequestBase request = new HttpGet(server);
         apiSpy.attachSecurityInfo(request);
         assertEquals(apiSpy.getSecurityToken(), RallyRestApi.SECURITY_ENDPOINT_DOES_NOT_EXIST);
-        verify(apiSpy, times(1)).getWithForceReauth(any(GetRequest.class));
+        verify(apiSpy, times(1)).get(any(GetRequest.class), eq(true));
 
         apiSpy.attachSecurityInfo(request);
         //validate does not get called again once known sec endpoint does not exist
-        verify(apiSpy, times(1)).getWithForceReauth(any(GetRequest.class));
+        verify(apiSpy, times(1)).get(any(GetRequest.class), eq(true));
     }
 
     public void shouldAttachTheSecurityTokenToRequestWithExistingTokenValue() throws Exception {
@@ -102,11 +102,11 @@ public class RallyRestApiTest {
         response.add(OPERATION_RESULT_KEY, getResult);
 
         GetResponse toBeReturned = new GetResponse(new Gson().toJson(response));
-        doReturn(toBeReturned).when(apiSpy).getWithForceReauth(any(GetRequest.class));
+        doReturn(toBeReturned).when(apiSpy).get(any(GetRequest.class), eq(true));
 
         HttpRequestBase request = new HttpGet(server);
         apiSpy.attachSecurityInfo(request);
-        verify(apiSpy, times(1)).getWithForceReauth(any(GetRequest.class));
+        verify(apiSpy, times(1)).get(any(GetRequest.class), eq(true));
         validateSecurityTokenParam(request);
     }
 
@@ -121,71 +121,39 @@ public class RallyRestApiTest {
         assertTrue(foundToken);
     }
 
-    public void shouldCorrectlyCreate() throws Exception {
-        JsonObject response = new JsonObject();
-        JsonObject createResult = new JsonObject();
-        response.add("CreateResult", createResult);
-        createResult.add("Errors", new JsonArray());
-        createResult.add("Warnings", new JsonArray());
-        JsonObject object = new JsonObject();
-        object.addProperty("_ref", "/defect/1234.js");
-        createResult.add("Object", object);
+    public void shouldCorrectlyCreateInWsapi1() throws Exception {
+        api.setWsapiVersion("1.43");
+        assertCanCreate();
+        assertEquals(attachTokenCount, 0);
+    }
 
-        RallyRestApi apiSpy = spy(api);
-        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
-
-        JsonObject newDefect = new JsonObject();
-        newDefect.addProperty("Name", "Foo");
-        CreateRequest request = new CreateRequest("defect", newDefect);
-        CreateResponse createResponse = apiSpy.create(request);
-
-        verify(apiSpy).doPost(api.buildWsapiUrl() + request.toUrl(), request.getBody());
-        Assert.assertTrue(createResponse.wasSuccessful());
-        JsonObject createdObj = createResponse.getObject();
-        assertEquals(createdObj.get("_ref").getAsString(), "/defect/1234.js");
+    public void shouldCorrectlyCreateInWsapi2() throws Exception {
+        api.setWsapiVersion("v2.0");
+        assertCanCreate();
         assertEquals(attachTokenCount, 1);
     }
 
-    public void shouldCorrectlyUpdate() throws Exception {
-        JsonObject response = new JsonObject();
-        JsonObject updateResult = new JsonObject();
-        response.add(OPERATION_RESULT_KEY, updateResult);
-        updateResult.add("Errors", new JsonArray());
-        updateResult.add("Warnings", new JsonArray());
-        JsonObject object = new JsonObject();
-        object.addProperty("_ref", "/defect/1234.js");
-        updateResult.add("Object", object);
+    public void shouldCorrectlyUpdateInWsapi1() throws Exception {
+        api.setWsapiVersion("1.43");
+        assertCanUpdate();
+        assertEquals(attachTokenCount, 0);
+    }
 
-        RallyRestApi apiSpy = spy(api);
-        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
-
-        JsonObject updatedDefect = new JsonObject();
-        updatedDefect.addProperty("Name", "Foo");
-        UpdateRequest request = new UpdateRequest("/defect/1234.js", updatedDefect);
-        UpdateResponse updateResponse = apiSpy.update(request);
-
-        verify(apiSpy).doPost(api.buildWsapiUrl() + request.toUrl(), request.getBody());
-        Assert.assertTrue(updateResponse.wasSuccessful());
-        JsonObject obj = updateResponse.getObject();
-        assertEquals(obj.get("_ref").getAsString(), "/defect/1234.js");
+    public void shouldCorrectlyUpdateInWsapi2() throws Exception {
+        api.setWsapiVersion("v2.0");
+        assertCanUpdate();
         assertEquals(attachTokenCount, 1);
     }
 
-    public void shouldCorrectlyDelete() throws Exception {
-        JsonObject response = new JsonObject();
-        JsonObject deleteResult = new JsonObject();
-        response.add(OPERATION_RESULT_KEY, deleteResult);
-        deleteResult.add("Errors", new JsonArray());
-        deleteResult.add("Warnings", new JsonArray());
+    public void shouldCorrectlyDeleteInWsapi1() throws Exception {
+        api.setWsapiVersion("1.43");
+        assertCanDelete();
+        assertEquals(attachTokenCount, 0);
+    }
 
-        RallyRestApi apiSpy = spy(api);
-        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
-
-        DeleteRequest request = new DeleteRequest("/defect/1234.js");
-        DeleteResponse deleteResponse = apiSpy.delete(request);
-
-        verify(apiSpy).doDelete(api.buildWsapiUrl() + request.toUrl());
-        Assert.assertTrue(deleteResponse.wasSuccessful());
+    public void shouldCorrectlyDeleteInWsapi2() throws Exception {
+        api.setWsapiVersion("v2.0");
+        assertCanDelete();
         assertEquals(attachTokenCount, 1);
     }
 
@@ -367,6 +335,72 @@ public class RallyRestApiTest {
         queryResult.add("Results", new JsonArray());
         queryResult.addProperty("TotalResultCount", totalResultCount);
         return response;
+    }
+
+    private void assertCanCreate() throws Exception {
+        JsonObject response = new JsonObject();
+        JsonObject createResult = new JsonObject();
+        response.add("CreateResult", createResult);
+        createResult.add("Errors", new JsonArray());
+        createResult.add("Warnings", new JsonArray());
+        JsonObject object = new JsonObject();
+        object.addProperty("_ref", "/defect/1234.js");
+        createResult.add("Object", object);
+
+        RallyRestApi apiSpy = spy(api);
+        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
+
+        JsonObject newDefect = new JsonObject();
+        newDefect.addProperty("Name", "Foo");
+        CreateRequest request = new CreateRequest("defect", newDefect);
+        CreateResponse createResponse = apiSpy.create(request);
+
+        verify(apiSpy).doPost(api.buildWsapiUrl() + request.toUrl(), request.getBody());
+        Assert.assertTrue(createResponse.wasSuccessful());
+        JsonObject createdObj = createResponse.getObject();
+        assertEquals(createdObj.get("_ref").getAsString(), "/defect/1234.js");
+        //assertEquals(attachTokenCount, 1);
+    }
+
+    private void assertCanUpdate() throws Exception {
+        JsonObject response = new JsonObject();
+        JsonObject updateResult = new JsonObject();
+        response.add(OPERATION_RESULT_KEY, updateResult);
+        updateResult.add("Errors", new JsonArray());
+        updateResult.add("Warnings", new JsonArray());
+        JsonObject object = new JsonObject();
+        object.addProperty("_ref", "/defect/1234.js");
+        updateResult.add("Object", object);
+
+        RallyRestApi apiSpy = spy(api);
+        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
+
+        JsonObject updatedDefect = new JsonObject();
+        updatedDefect.addProperty("Name", "Foo");
+        UpdateRequest request = new UpdateRequest("/defect/1234.js", updatedDefect);
+        UpdateResponse updateResponse = apiSpy.update(request);
+
+        verify(apiSpy).doPost(api.buildWsapiUrl() + request.toUrl(), request.getBody());
+        Assert.assertTrue(updateResponse.wasSuccessful());
+        JsonObject obj = updateResponse.getObject();
+        assertEquals(obj.get("_ref").getAsString(), "/defect/1234.js");
+    }
+
+    private void assertCanDelete() throws Exception {
+        JsonObject response = new JsonObject();
+        JsonObject deleteResult = new JsonObject();
+        response.add(OPERATION_RESULT_KEY, deleteResult);
+        deleteResult.add("Errors", new JsonArray());
+        deleteResult.add("Warnings", new JsonArray());
+
+        RallyRestApi apiSpy = spy(api);
+        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
+
+        DeleteRequest request = new DeleteRequest("/defect/1234.js");
+        DeleteResponse deleteResponse = apiSpy.delete(request);
+
+        verify(apiSpy).doDelete(api.buildWsapiUrl() + request.toUrl());
+        Assert.assertTrue(deleteResponse.wasSuccessful());
     }
 
     class HttpRequestUtf8Matcher extends ArgumentMatcher<HttpEntityEnclosingRequestBase> {

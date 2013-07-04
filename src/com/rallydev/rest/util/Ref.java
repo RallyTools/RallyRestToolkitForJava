@@ -1,5 +1,8 @@
 package com.rallydev.rest.util;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,10 +11,33 @@ import java.util.regex.Pattern;
  */
 public class Ref {
 
-    private static Pattern refPattern = Pattern.compile(".*?/((?:/*\\w{2,}){1,2})/(\\d+(?:u\\d+[pw]\\d+)*)(?:\\.js\\??.*)*$");
+    private static List<Pattern> patterns = new ArrayList<Pattern>(Arrays.asList(
+
+            //dynatype collection ref (/portfolioitem/feature/1234
+            Pattern.compile(".*?/(\\w{2,}/\\w+)/(\\d+/\\w+)(?:\\.js\\??.*)*$"),
+            
+            //dynatype ref (/portfolioitem/feature/1234
+            Pattern.compile(".*?/(\\w{2,}/\\w+)/(\\d+)(?:\\.js\\??.*)*$"),
+
+            //collection ref (/defect/1234/tasks)
+            Pattern.compile(".*?/(\\w+/\\d+)/(\\w+)(?:\\.js\\??.*)*$"),
+            
+            //basic ref (/defect/1234)
+            Pattern.compile(".*?/(\\w+)/(\\d+)(?:\\.js\\??.*)*$"),
+            
+            //permission ref (/workspacepermission/123u456w1)
+            Pattern.compile(".*?/(\\w+)/(\\d+u\\d+[pw]\\d+)(?:\\.js\\??.*)*$")
+    ));
     
     private static Matcher match(String ref) {
-        return refPattern.matcher(ref != null ? ref : "");    
+        String test = ref != null ? ref : "";
+        for(Pattern pattern : patterns) {
+            Matcher m = pattern.matcher(test);
+            if(m.matches()) {
+                return m;
+            }
+        }
+        return null;
     }
 
     /**
@@ -22,7 +48,7 @@ public class Ref {
      * @return whether the specified string is a valid ref url
      */
     public static boolean isRef(String ref) {
-        return match(ref).matches();
+        return match(ref) != null;
     }
 
     /**
@@ -34,7 +60,7 @@ public class Ref {
      */
     public static String getRelativeRef(String ref) {
         Matcher matcher = match(ref);
-        return matcher.matches() ? String.format("/%s/%s", matcher.group(1), matcher.group(2)) : null;
+        return matcher != null ? String.format("/%s/%s", matcher.group(1), matcher.group(2)) : null;
     }
 
     /**
@@ -46,7 +72,7 @@ public class Ref {
      */
     public static String getTypeFromRef(String ref) {
         Matcher matcher = match(ref);
-        return matcher.matches() ? matcher.group(1) : null;
+        return matcher != null ? matcher.group(1) : null;
     }
 
     /**
@@ -58,6 +84,6 @@ public class Ref {
      */
     public static String getOidFromRef(String ref) {
         Matcher matcher = match(ref);
-        return matcher.matches() ? matcher.group(2) : null;
+        return matcher != null ? matcher.group(2) : null;
     }
 }

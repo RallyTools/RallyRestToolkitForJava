@@ -4,18 +4,17 @@
     <artifact build-on-make="true" name="RallyRestApiJava:jar">
       <output-path>$PROJECT_DIR$/out/artifacts</output-path>
       <root id="root">
-        <element id="archive" name="rally-rest-api-1.0.7.jar">
+        <element id="archive" name="rally-rest-api-2.0.jar">
           <element id="directory" name="META-INF">
             <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
           </element>
           <element id="module-output" name="RallyRestApiJava" />
         </element>
         <element id="library" level="project" name="commons-logging-1.1.1" />
-        <element id="library" level="project" name="gson-2.1" />
         <element id="library" level="project" name="commons-codec-1.6" />
-        <element id="library" level="project" name="httpclient-4.2.1" />
-        <element id="library" level="project" name="httpclient-cache-4.2.1" />
-        <element id="library" level="project" name="httpcore-4.2.1" />
+        <element id="library" level="project" name="gson-2.2.4" />
+        <element id="library" level="project" name="httpclient-4.2.5" />
+        <element id="library" level="project" name="httpcore-4.2.4" />
       </root>
     </artifact>
   </component>
@@ -63,7 +62,7 @@
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
     <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
     <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="-link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs -link http://docs.oracle.com/javase/6/docs/api -windowtitle &quot;Rally Rest API for Java 1.0.7&quot; -doctitle &quot;Rally Rest API for Java 1.0.7&quot;" />
+    <option name="OTHER_OPTIONS" value="-link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs -link http://docs.oracle.com/javase/7/docs/api -windowtitle &quot;Rally Rest API for Java 2.0&quot; -doctitle &quot;Rally Rest API for Java 2.0&quot;" />
     <option name="HEAP_SIZE" />
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="false" />
@@ -202,7 +201,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SvnBranchConfigurationManager">
@@ -227,30 +226,25 @@
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="gson-2.1">
+    <library name="gson-2.2.4">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/gson-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/gson-2.2.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-4.2.5.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpcore-4.2.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="httpclient-4.2.1">
+    <library name="httpclient-4.2.5">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-4.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-4.2.5.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="httpclient-cache-4.2.1">
+    <library name="httpcore-4.2.4">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/httpclient-cache-4.2.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="httpcore-4.2.1">
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/src/httpcore-4.2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/src/httpcore-4.2.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

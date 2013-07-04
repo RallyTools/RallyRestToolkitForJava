@@ -1,5 +1,6 @@
 package com.rallydev.rest.request;
 
+import com.google.gson.JsonObject;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
 import com.rallydev.rest.util.Ref;
@@ -16,6 +17,8 @@ import java.util.List;
 public class QueryRequest extends Request implements Cloneable {
 
     private String type;
+    private JsonObject collection;
+
     private Fetch fetch = new Fetch();
     private String order = "ObjectID";
     private QueryFilter queryFilter = null;
@@ -31,7 +34,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Create a new query request for the specified type.
-     * 
+     *
      * @param type The WSAPI type to be queried, e.g. Defect
      */
     public QueryRequest(String type) {
@@ -39,8 +42,18 @@ public class QueryRequest extends Request implements Cloneable {
     }
 
     /**
+     * Create a new query request for the specified collection.
+     * Only supported in WSAPI v2.0 and above.
+     *
+     * @param collection The collection to query.  Should have a _ref property.
+     */
+    public QueryRequest(JsonObject collection) {
+        this.collection = collection;
+    }
+
+    /**
      * Get the filter by which the result set will be narrowed down.
-     * 
+     *
      * @return the filter
      */
     public QueryFilter getQueryFilter() {
@@ -49,7 +62,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Set a filter by which the result set will be narrowed down.
-     * 
+     *
      * @param queryFilter the filter
      */
     public void setQueryFilter(QueryFilter queryFilter) {
@@ -59,7 +72,7 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * Set the order by which the result set will be sorted.
      * <p>The default is ObjectID ASC.</p>
-     *  
+     *
      * @return the order
      */
     public String getOrder() {
@@ -68,7 +81,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the order by which the result set will be sorted.
-     * 
+     *
      * @param order the order
      */
     public void setOrder(String order) {
@@ -77,6 +90,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the workspace which the result set should be scoped to.
+     * Ignored if querying a collection.
      *
      * @return the project
      */
@@ -87,6 +101,8 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * <p>Specify the workspace which the result set should be scoped to.<p/>
      * The default is the user's default workspace.
+     * <p/>
+     * Ignored if querying a collection.
      *
      * @param workspaceRef the ref of the workspace to scope to.  May be an absolute or relative ref, e.g. /workspace/1234
      */
@@ -96,7 +112,8 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the project which the result set should be scoped to.
-     * 
+     * Ignored if querying a collection.
+     *
      * @return the project
      */
     public String getProject() {
@@ -107,6 +124,8 @@ public class QueryRequest extends Request implements Cloneable {
      * <p>Specify the project which the result set should be scoped to.<p/>
      * The default is the user's default project.
      * Specifying null will cause the result to be scoped to the entire specified workspace.
+     * <p/>
+     * Ignored if querying a collection.
      *
      * @param projectRef the ref of the project to scope to.  May be null or an absolute or relative ref, e.g. /project/1234
      */
@@ -116,6 +135,8 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * If a project has been specified, get whether to include matching objects in parent projects in the result set.
+     * <p/>
+     * Ignored if querying a collection.
      *
      * @return whether to include matching objects in parent projects.
      */
@@ -126,8 +147,10 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * <p>If a project has been specified, set whether to include matching objects in parent projects in the result set.</p>
      * Defaults to false.
+     * <p/>
+     * Ignored if querying a collection.
      *
-     * @param scopeUp whether to include matching objects in parent projects 
+     * @param scopeUp whether to include matching objects in parent projects
      */
     public void setScopedUp(boolean scopeUp) {
         this.scopedUp = scopeUp;
@@ -135,7 +158,9 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * If a project has been specified, get whether to include matching objects in child projects in the result set.
-     * 
+     * <p/>
+     * Ignored if querying a collection.
+     *
      * @return whether to include matching objects in child projects.
      */
     public boolean isScopedDown() {
@@ -145,8 +170,10 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * <p>If a project has been specified, set whether to include matching objects in child projects in the result set.</p>
      * Defaults to true.
-     * 
-     * @param scopeDown whether to include matching objects in child projects 
+     * <p/>
+     * Ignored if querying a collection.
+     *
+     * @param scopeDown whether to include matching objects in child projects
      */
     public void setScopedDown(boolean scopeDown) {
         this.scopedDown = scopeDown;
@@ -154,7 +181,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the start index of the result set.
-     * 
+     *
      * @return the start index
      */
     public int getStart() {
@@ -164,6 +191,7 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * Set the 1-based start index of the result set.
      * The default is 1.
+     *
      * @param start the start index
      */
     public void setStart(int start) {
@@ -191,7 +219,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the page size of the result set.
-     * 
+     *
      * @return the page size
      */
     public int getPageSize() {
@@ -201,7 +229,8 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * <p>Set the page size of the result set.</p>
      * The default is 200.
-     * @param pageSize the new page size.  Must be between 20 and 200 inclusive.
+     *
+     * @param pageSize the new page size.  Must be between 1 and 200 inclusive.
      */
     public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
@@ -209,7 +238,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the maximum number of records to be returned from the query.
-     * 
+     *
      * @return the maximum number of records
      */
     public int getLimit() {
@@ -219,6 +248,7 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * <p>Set the maximum number of records to be returned from the query.</p>
      * If not set only one page of data will be returned by {@link com.rallydev.rest.RallyRestApi#query}
+     *
      * @param limit the maximum number of records to be returned
      */
     public void setLimit(int limit) {
@@ -227,7 +257,7 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Clone this request.
-     * 
+     *
      * @return the cloned instance of this request.
      */
     @Override
@@ -254,10 +284,13 @@ public class QueryRequest extends Request implements Cloneable {
         params.add(new BasicNameValuePair("fetch", fetch.toString()));
 
         String order = getOrder();
-        if(!order.contains("ObjectID")) {
+        if (!order.contains("ObjectID")) {
             order += ",ObjectID";
         }
         params.add(new BasicNameValuePair("order", order));
+        if (getQueryFilter() != null) {
+            params.add(new BasicNameValuePair("query", getQueryFilter().toString()));
+        }
 
         if (getWorkspace() != null && getWorkspace().length() > 0) {
             params.add(new BasicNameValuePair("workspace", Ref.getRelativeRef(getWorkspace())));
@@ -271,17 +304,14 @@ public class QueryRequest extends Request implements Cloneable {
             params.add(new BasicNameValuePair("projectScopeDown", Boolean.toString(isScopedDown())));
         }
 
-        if (getQueryFilter() != null) {
-            params.add(new BasicNameValuePair("query", getQueryFilter().toString()));
-        }
-
-        return getTypeEndpoint() + "?" +
-                URLEncodedUtils.format(params, "utf-8");
+        return (this.type != null ? getTypeEndpoint() :
+                Ref.getRelativeRef(collection.get("_ref").getAsString())) +
+                "?" + URLEncodedUtils.format(params, "utf-8");
     }
-    
+
     protected String getTypeEndpoint() {
         String typeEndpoint = type.toLowerCase().replaceAll(" ", "");
-        if(typeEndpoint.equals("subscription") || typeEndpoint.equals("user")) {
+        if (typeEndpoint.equals("subscription") || typeEndpoint.equals("user")) {
             typeEndpoint += "s";
         }
         return "/" + typeEndpoint + ".js";
