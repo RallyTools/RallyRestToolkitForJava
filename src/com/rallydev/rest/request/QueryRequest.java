@@ -90,7 +90,6 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the workspace which the result set should be scoped to.
-     * Ignored if querying a collection.
      *
      * @return the project
      */
@@ -102,7 +101,6 @@ public class QueryRequest extends Request implements Cloneable {
      * <p>Specify the workspace which the result set should be scoped to.<p/>
      * The default is the user's default workspace.
      * <p/>
-     * Ignored if querying a collection.
      *
      * @param workspaceRef the ref of the workspace to scope to.  May be an absolute or relative ref, e.g. /workspace/1234
      */
@@ -112,7 +110,6 @@ public class QueryRequest extends Request implements Cloneable {
 
     /**
      * Get the project which the result set should be scoped to.
-     * Ignored if querying a collection.
      *
      * @return the project
      */
@@ -125,7 +122,6 @@ public class QueryRequest extends Request implements Cloneable {
      * The default is the user's default project.
      * Specifying null will cause the result to be scoped to the entire specified workspace.
      * <p/>
-     * Ignored if querying a collection.
      *
      * @param projectRef the ref of the project to scope to.  May be null or an absolute or relative ref, e.g. /project/1234
      */
@@ -136,7 +132,6 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * If a project has been specified, get whether to include matching objects in parent projects in the result set.
      * <p/>
-     * Ignored if querying a collection.
      *
      * @return whether to include matching objects in parent projects.
      */
@@ -148,7 +143,6 @@ public class QueryRequest extends Request implements Cloneable {
      * <p>If a project has been specified, set whether to include matching objects in parent projects in the result set.</p>
      * Defaults to false.
      * <p/>
-     * Ignored if querying a collection.
      *
      * @param scopeUp whether to include matching objects in parent projects
      */
@@ -159,7 +153,6 @@ public class QueryRequest extends Request implements Cloneable {
     /**
      * If a project has been specified, get whether to include matching objects in child projects in the result set.
      * <p/>
-     * Ignored if querying a collection.
      *
      * @return whether to include matching objects in child projects.
      */
@@ -171,7 +164,6 @@ public class QueryRequest extends Request implements Cloneable {
      * <p>If a project has been specified, set whether to include matching objects in child projects in the result set.</p>
      * Defaults to true.
      * <p/>
-     * Ignored if querying a collection.
      *
      * @param scopeDown whether to include matching objects in child projects
      */
