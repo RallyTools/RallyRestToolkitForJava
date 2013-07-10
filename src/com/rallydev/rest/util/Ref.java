@@ -20,7 +20,7 @@ public class Ref {
             Pattern.compile(".*?/(\\w{2,}/\\w+)/(\\d+)(?:\\.js\\??.*)*$"),
 
             //collection ref (/defect/1234/tasks)
-            Pattern.compile(".*?/(\\w+/\\d+)/(\\w+)(?:\\.js\\??.*)*$"),
+            Pattern.compile(".*?/(\\w+/-?\\d+)/(\\w+)(?:\\.js\\??.*)*$"),
             
             //basic ref (/defect/1234)
             Pattern.compile(".*?/(\\w+)/(\\d+)(?:\\.js\\??.*)*$"),

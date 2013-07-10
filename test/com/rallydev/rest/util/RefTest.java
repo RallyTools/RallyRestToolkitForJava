@@ -118,5 +118,6 @@ public class RefTest {
         Assert.assertEquals(Ref.getRelativeRef("/defect/1234/tasks"), "/defect/1234/tasks", "Valid relative collection ref");
         Assert.assertEquals(Ref.getRelativeRef("https://rally1.rallydev.com/slm/webservice/1.38/portfolioitem/feature/1234/children"), "/portfolioitem/feature/1234/children", "Valid dynatype collection ref");
         Assert.assertEquals(Ref.getRelativeRef("/portfolioitem/feature/1234/children"), "/portfolioitem/feature/1234/children", "Valid dynatype relative collection ref");
+        Assert.assertEquals(Ref.getRelativeRef("/typedefinition/-12345/attributes"), "/typedefinition/-12345/attributes", "Valid built-in type def attributes relative collection ref");
     }
 }
