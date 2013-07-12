@@ -10,7 +10,7 @@
     <name>Rally Rest Toolkit For Java</name>
     <groupId>com.rallydev.rest</groupId>
     <artifactId>rally-rest-api</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.2-SNAPSHOT</version>
 
     <description>A java toolkit for interacting with the Rally Rest API</description>
 
