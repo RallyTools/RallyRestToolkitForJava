@@ -24,9 +24,12 @@ It provides a rich set of capabilities for querying, along with methods for crea
 
 [Web Services API documentation](https://rally1.rallydev.com/slm/doc/webservice)
 
-## Usage
+## Setup
 
-Create a new Java project in your favorite IDE and add rally-rest-api-1.0.7.jar appropriate to your version of JDK to your classpath.
+Create a new Java project in your favorite IDE.
+
+#### Manual
+Add rally-rest-api-2.0.2.jar appropriate to your version of JDK to your classpath.
 
 You will also need to add the following jars:
 
@@ -40,6 +43,19 @@ You will also need to add the following jars:
 All the jars except gson-2.1.jar can be found in [httpcomponents-client-4.2.1-bin.zip](http://archive.apache.org/dist/httpcomponents/httpclient/binary/httpcomponents-client-4.2.1-bin.zip) in the archives for the Apache httpcomponents project.
 
 The gson-2.1.jar file can be found in [google-gson-2.1-release.zip](http://google-gson.googlecode.com/files/google-gson-2.1-release.zip) on Google Code.
+
+#### Managed (Maven)
+Add the rally-rest-api dependency to your pom.xml
+
+```xml
+<dependency>
+    <groupId>com.rallydev.rest</groupId>
+    <artifactId>rally-rest-api</artifactId>
+    <version>2.0.2</version>
+</dependency>
+```
+
+## Usage
 
 In your main method, instantiate a new [RallyRestApi](https://docs.rallydev.com/javarestapi/com/rallydev/rest/RallyRestApi.html):
 
@@ -414,3 +430,49 @@ public class QueryExample {
 }
 </java>
 ```
+
+## Development
+### Releasing to Maven central
+#### One-time Setup
+* Install Maven 3
+* Install gpg to sign the artifacts
+
+```bash
+brew install gpg
+```
+* Get a copy of the the gpg key pair archive from Matt Cholick, Kyle Morse, or Charles Ferentchak
+* Place the contents of the key pair archive in ~/.gnupg
+* Add login login information to Sonatype's repository to your ~/.m2/settings.xml (again getting the credentials from Matt, Kyle, or Charles)
+
+```xml
+<settings>
+    <servers>
+        <server>
+            <id>sonatype-nexus-snapshots</id>
+            <username>user</username>
+            <password>password</password>
+        </server>
+        <server>
+            <id>sonatype-nexus-staging</id>
+            <username>user</username>
+            <password>password</password>
+        </server>
+    </servers>
+</settings>
+```
+#### Releasing to Sonatype OSS (central)
+This is a stripped down version of a much, much longer guide https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide
+
+* Prepare the release (create tag & update pom)
+
+```bash
+mvn release:clean
+mvn release:prepare
+```
+* Release!
+
+```bash
+mvn release:perform
+```
+
+Finally, draft a Github release from the tag created by Maven.
