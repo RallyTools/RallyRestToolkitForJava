@@ -1,6 +1,7 @@
 out/
 .DS_Store
-RallyRestApiJava.iws
+*.iws
+*.ipr
+*.iml
 /target
-
 .idea
