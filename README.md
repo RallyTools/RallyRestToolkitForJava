@@ -16,11 +16,9 @@ The Java Toolkit for Rally REST API provides an intuitive Java API for accessing
 
 It provides a rich set of capabilities for querying, along with methods for creating, reading, updating, and deleting individual items.
 
-[Java 7 Download](http://people.rallydev.com/connector/RallyRestApiJava/1.0.7/java7/rally-rest-api-1.0.7.jar)
+[Download](https://github.com/RallyTools/RallyRestToolkitForJava/releases/download/v2.0.2/rally-rest-api-2.0.2.jar)
 
-[Java 6 Download](http://people.rallydev.com/connector/RallyRestApiJava/1.0.7/java6/rally-rest-api-1.0.7.jar)
-
-[Full API documentation](https://docs.rallydev.com/javarestapi/index.html)
+[Full API documentation](http://rallytools.github.io/RallyRestToolkitForJava/)
 
 [Web Services API documentation](https://rally1.rallydev.com/slm/doc/webservice)
 
@@ -29,20 +27,19 @@ It provides a rich set of capabilities for querying, along with methods for crea
 Create a new Java project in your favorite IDE.
 
 #### Manual
-Add rally-rest-api-2.0.2.jar appropriate to your version of JDK to your classpath.
+Add [rally-rest-api-2.0.2.jar](https://github.com/RallyTools/RallyRestToolkitForJava/releases/download/v2.0.2/rally-rest-api-2.0.2.jar) appropriate to your version of JDK to your classpath.
 
 You will also need to add the following jars:
 
-*   httpcore-4.2.1.jar
-*   httpclient-4.2.1.jar
-*   httpclient-cache-4.2.1.jar</a>
-*   commons-logging-1.1.1.jar</a>
-*   commons-codec-1.6.jar</a>
-*   gson-2.1.jar</a>
+*   httpcore-4.2.4.jar
+*   httpclient-4.2.5.jar
+*   commons-logging-1.1.1.jar
+*   commons-codec-1.6.jar
+*   gson-2.2.4.jar
 
-All the jars except gson-2.1.jar can be found in [httpcomponents-client-4.2.1-bin.zip](http://archive.apache.org/dist/httpcomponents/httpclient/binary/httpcomponents-client-4.2.1-bin.zip) in the archives for the Apache httpcomponents project.
+All the jars except gson-2.1.jar can be found in [httpcomponents-client-4.2.5-bin.zip](http://archive.apache.org/dist/httpcomponents/httpclient/binary/httpcomponents-client-4.2.5-bin.zip) in the archives for the Apache httpcomponents project.
 
-The gson-2.1.jar file can be found in [google-gson-2.1-release.zip](http://google-gson.googlecode.com/files/google-gson-2.1-release.zip) on Google Code.
+The gson-2.2.4.jar file can be found in [google-gson-2.2.4-release.zip](http://google-gson.googlecode.com/files/google-gson-2.2.4-release.zip) on Google Code.
 
 #### Managed (Maven)
 Add the rally-rest-api dependency to your pom.xml
