@@ -1,6 +1,6 @@
 ## License
 
-Copyright (c) 2002-2013 Rally Software Development Corp. All Rights Reserved. Your use of this Software is governed by the terms and conditions of the applicable Subscription Agreement between your company and Rally Software Development Corp.
+Copyright (c) Rally Software Development Corp. 2013 Distributed under the MIT License.
 
 ## Warranty
 
