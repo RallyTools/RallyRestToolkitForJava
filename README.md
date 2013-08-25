@@ -10,6 +10,10 @@ The Java Toolkit for Rally REST API is available on an as-is basis.
 
 Rally Software does not actively maintain or support this toolkit. If you have a question or problem, we recommend posting it to Stack Overflow: http://stackoverflow.com/questions/ask?tags=rally
 
+## Download
+
+[Download REST API jar and dependencies](https://github.com/RallyTools/RallyRestToolkitForJava/wiki/User-Guide#setup)
+
 ## User Guide
 
 Please view our [Java Toolkit for Rally REST API User Guide](https://github.com/RallyTools/RallyRestToolkitForJava/wiki/User-Guide) in the attached wiki
