@@ -16,7 +16,7 @@ Rally Software does not actively maintain or support this toolkit. If you have a
 
 ## User Guide
 
-Please view our [Java Toolkit for Rally REST API User Guide](https://github.com/RallyTools/RallyRestToolkitForJava/wiki/User-Guide) in the attached wiki
+Please view the [Java Toolkit for Rally REST API User Guide](https://github.com/RallyTools/RallyRestToolkitForJava/wiki/User-Guide) in the attached wiki
 
 [Java Toolkit for Rally REST API javadocs](http://rallytools.github.io/RallyRestToolkitForJava/)
 
