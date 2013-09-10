@@ -9,6 +9,7 @@ public class RefTest {
     public void shouldDetectValidRefs() {
         Assert.assertTrue(Ref.isRef("/defect/1234"), "Valid relative ref");
         Assert.assertTrue(Ref.isRef("/defect/1234.js"), "Valid relative ref w/ extension");
+        Assert.assertTrue(Ref.isRef("/typedefinition/-1234.js"), "Valid relative built-in typedef ref");
         Assert.assertTrue(Ref.isRef("https://rally1.rallydev.com/slm/webservice/1.32/defect/1234"), "Valid absolute ref");
         Assert.assertTrue(Ref.isRef("http://rally1.rallydev.com/slm/webservice/1.32/defect/1234.js"), "Valid absolute ref w/ extension");
     }
@@ -75,6 +76,7 @@ public class RefTest {
     public void shouldReturnOidsFromRefs() {
         Assert.assertEquals(Ref.getOidFromRef("/defect/1234"), "1234", "Relative ref");
         Assert.assertEquals(Ref.getOidFromRef("/defect/1234.js"), "1234", "Relative ref with extension");
+        Assert.assertEquals(Ref.getOidFromRef("/typedefinition/-1234.js"), "-1234", "Relative built-in typedef ref");
         Assert.assertEquals(Ref.getOidFromRef("https://rally1.rallydev.com/slm/webservice/1.32/defect/1234"), "1234", "Valid absolute ref");
     }
 

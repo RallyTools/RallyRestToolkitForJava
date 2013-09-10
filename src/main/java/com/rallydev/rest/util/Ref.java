@@ -23,7 +23,7 @@ public class Ref {
             Pattern.compile(".*?/(\\w+/-?\\d+)/(\\w+)(?:\\.js\\??.*)*$"),
             
             //basic ref (/defect/1234)
-            Pattern.compile(".*?/(\\w+)/(\\d+)(?:\\.js\\??.*)*$"),
+            Pattern.compile(".*?/(\\w+)/(-?\\d+)(?:\\.js\\??.*)*$"),
             
             //permission ref (/workspacepermission/123u456w1)
             Pattern.compile(".*?/(\\w+)/(\\d+u\\d+[pw]\\d+)(?:\\.js\\??.*)*$")
