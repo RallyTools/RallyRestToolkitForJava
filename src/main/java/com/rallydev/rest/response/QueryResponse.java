@@ -2,8 +2,6 @@ package com.rallydev.rest.response;
 
 import com.google.gson.JsonArray;
 
-import static com.rallydev.rest.RallyRestApi.QUERY_RESULT_KEY;
-
 /**
  * Represents a WSAPI response from querying for objects.
  */
@@ -25,12 +23,12 @@ public class QueryResponse extends Response {
      */
     @Override
     protected String getRoot() {
-        return QUERY_RESULT_KEY;
+        return "QueryResult";
     }
 
     /**
      * Get the total number of objects that matched the query
-     * 
+     *
      * @return the total number of objects
      */
     public int getTotalResultCount() {
@@ -40,7 +38,7 @@ public class QueryResponse extends Response {
     /**
      * Get the results of the query
      * <p>Depending on the limit of the original request this may include one or more pages.</p>
-     * 
+     *
      * @return the results
      */
     public JsonArray getResults() {
@@ -49,7 +47,7 @@ public class QueryResponse extends Response {
 
     /**
      * Get the page size of the results
-     * 
+     *
      * @return the page size
      */
     public int getPageSize() {
@@ -58,7 +56,7 @@ public class QueryResponse extends Response {
 
     /**
      * Get the start index of the results
-     * 
+     *
      * @return the start index
      */
     public int getStart() {

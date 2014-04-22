@@ -4,13 +4,13 @@ import com.google.gson.JsonObject;
 import com.rallydev.rest.RallyRestApi;
 
 /**
- * Represents a WSAPI response from creating an object 
+ * Represents a WSAPI response from creating an object
  */
 public class CreateResponse extends Response {
 
     /**
      * Create a new create response from the specified JSON encoded string.
-     * 
+     *
      * @param createResponse the JSON encoded string
      */
     public CreateResponse(String createResponse) {
@@ -19,17 +19,17 @@ public class CreateResponse extends Response {
 
     /**
      * Get the name of the root JSON result
-     * 
+     *
      * @return the root element name
      */
     @Override
     protected String getRoot() {
-        return RallyRestApi.CREATE_RESULT_KEY;
+        return "CreateResult";
     }
 
     /**
      * Get the created object.
-     * <p>Returns null if the operation was not successful</p> 
+     * <p>Returns null if the operation was not successful</p>
      * @return the created object
      */
     public JsonObject getObject() {

@@ -22,32 +22,33 @@ public class CollectionQueryExample {
         RallyRestApi restApi = RestApiFactory.getRestApi();
 
         try {
-            String ref = "/hierarchicalrequirement/12544729477";
-            GetRequest getRequest = new GetRequest(ref);
-            getRequest.setFetch(new Fetch("Defects"));
-            
-            System.out.println(String.format("\nReading defect info for story %s...", ref));
-            GetResponse getResponse = restApi.get(getRequest);
-            JsonObject story = getResponse.getObject();
-            
+            //Get a story with defects
+            System.out.println("\nQuerying for stories with defects...");
+            QueryRequest storiesWithDefects = new QueryRequest("hierarchicalrequirement");
+            storiesWithDefects.setQueryFilter(new QueryFilter("Defects.ObjectID", "!=", null));
+            storiesWithDefects.setFetch(new Fetch("FormattedID", "Name", "Defects"));
+            QueryResponse storiesWithDefectsResponse = restApi.query(storiesWithDefects);
+            JsonObject story = storiesWithDefectsResponse.getResults().get(0).getAsJsonObject();
+            System.out.println(String.format("Found: %s - %s", story.get("FormattedID").getAsString(), story.get("Name").getAsString()));
+
+            //Inspect the defects collection
             JsonObject defectInfo = story.getAsJsonObject("Defects");
             int defectCount = defectInfo.get("Count").getAsInt();
             System.out.println(String.format("\nTotal defects: %d", defectCount));
 
-            if(defectCount > 0) {
-                QueryRequest defectRequest = new QueryRequest(defectInfo);
-                defectRequest.setFetch(new Fetch("FormattedID", "Name", "State", "Priority"));
+            //Query the defects collection
+            QueryRequest defectRequest = new QueryRequest(defectInfo);
+            defectRequest.setFetch(new Fetch("FormattedID", "Name", "State", "Priority"));
 
-                QueryResponse queryResponse = restApi.query(defectRequest);
-                if (queryResponse.wasSuccessful()) {
-                    for (JsonElement result : queryResponse.getResults()) {
-                        JsonObject defect = result.getAsJsonObject();
-                        System.out.println(String.format("\t%s - %s: Priority=%s, State=%s",
-                                defect.get("FormattedID").getAsString(),
-                                defect.get("Name").getAsString(),
-                                defect.get("Priority").getAsString(),
-                                defect.get("State").getAsString()));
-                    }
+            QueryResponse queryResponse = restApi.query(defectRequest);
+            if (queryResponse.wasSuccessful()) {
+                for (JsonElement result : queryResponse.getResults()) {
+                    JsonObject defect = result.getAsJsonObject();
+                    System.out.println(String.format("\t%s - %s: Priority=%s, State=%s",
+                            defect.get("FormattedID").getAsString(),
+                            defect.get("Name").getAsString(),
+                            defect.get("Priority").getAsString(),
+                            defect.get("State").getAsString()));
                 }
             }
         } finally {
