@@ -64,6 +64,7 @@ public class RallyRestApi implements Closeable {
     protected static final String SECURITY_TOKEN_PARAM_KEY = "key";
     private static final String SECURITY_TOKEN_URL = "/security/authorize";
     protected static final String SECURITY_TOKEN_KEY = "SecurityToken";
+    protected static final String API_KEY_HEADER = "zsessionid";
 
     protected URI server;
     protected URI proxy;
@@ -71,14 +72,15 @@ public class RallyRestApi implements Closeable {
     protected String wsapiVersion = DEFAULT_WSAPI_VERSION;
     protected DefaultHttpClient httpClient;
     private UsernamePasswordCredentials usernamePasswordCredentials;
+    private String apiKey;
     private String securityToken;
 
     protected Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v2.0.3");
+            put(Header.Library, "Rally Rest API for Java v2.0.5");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "2.0.3");
+            put(Header.Version, "2.0.5");
         }
     };
 
@@ -90,9 +92,24 @@ public class RallyRestApi implements Closeable {
      * @param password The password to be used for authentication.
      */
     public RallyRestApi(URI server, String userName, String password) {
+        this(server);
+        setClientCredentials(server, userName, password);
+    }
+
+    /**
+     * Creates a new instance for the specified server using the specified API Key.
+     *
+     * @param server   The server to connect to, e.g. {@code new URI("https://rally1.rallydev.com")}
+     * @param apiKey The API Key to be used for authentication.
+     */
+    public RallyRestApi(URI server, String apiKey) {
+        this(server);
+        this.apiKey = apiKey;
+    }
+
+    private RallyRestApi(URI server) {
         this.server = server;
         httpClient = new DefaultHttpClient();
-        setClientCredentials(server, userName, password);
     }
 
     /**
@@ -162,7 +179,7 @@ public class RallyRestApi implements Closeable {
      * @throws IOException if an error occurs during the creation.
      */
     public CreateResponse create(CreateRequest request) throws IOException {
-        return create(request, true);
+        return create(request, apiKey == null);
     }
 
     private CreateResponse create(CreateRequest request, boolean retryOnFail) throws IOException {
@@ -182,7 +199,7 @@ public class RallyRestApi implements Closeable {
      * @throws IOException if an error occurs during the update.
      */
     public UpdateResponse update(UpdateRequest request) throws IOException {
-        return update(request, true);
+        return update(request, apiKey == null);
     }
 
     private UpdateResponse update(UpdateRequest request, boolean retryOnFail) throws IOException {
@@ -202,7 +219,7 @@ public class RallyRestApi implements Closeable {
      * @throws IOException if an error occurs during the deletion.
      */
     public DeleteResponse delete(DeleteRequest request) throws IOException {
-        return delete(request, true);
+        return delete(request, apiKey == null);
     }
 
     private DeleteResponse delete(DeleteRequest request, boolean retryOnFail) throws IOException {
@@ -306,6 +323,9 @@ public class RallyRestApi implements Closeable {
         for (Map.Entry<Header, String> header : headers.entrySet()) {
             request.setHeader("X-RallyIntegration" + header.getKey().name(), header.getValue());
         }
+        if(this.apiKey != null) {
+            request.setHeader(API_KEY_HEADER, this.apiKey);
+        }
 
         HttpResponse response = httpClient.execute(request);
         HttpEntity entity = response.getEntity();
@@ -345,7 +365,7 @@ public class RallyRestApi implements Closeable {
      */
     private String doSecuredRequest(HttpRequestBase request) throws IOException {
         if (!request.getMethod().equals(HttpGet.METHOD_NAME) &&
-                !this.getWsapiVersion().matches("^1[.]\\d+")) {
+                !this.getWsapiVersion().matches("^1[.]\\d+") && apiKey == null) {
             try {
                 attachSecurityInfo(request);
             } catch (URISyntaxException e) {
@@ -416,7 +436,7 @@ public class RallyRestApi implements Closeable {
         httpPost.setEntity(new StringEntity(body, "utf-8"));
         return doSecuredRequest(httpPost);
     }
-    
+
 
     /**
      * Perform a put against the WSAPI
