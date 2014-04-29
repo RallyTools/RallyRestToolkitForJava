@@ -30,10 +30,6 @@ import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
-import static com.rallydev.rest.RallyRestApi.OPERATION_RESULT_KEY;
-import static com.rallydev.rest.RallyRestApi.QUERY_RESULT_KEY;
-import static com.rallydev.rest.RallyRestApi.SECURITY_TOKEN_KEY;
-import static com.rallydev.rest.RallyRestApi.SECURITY_TOKEN_PARAM_KEY;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.anyString;
@@ -52,6 +48,7 @@ public class RallyRestApiTest {
     private String securityToken;
     private int attachTokenCount;
     private URI server;
+    private String apiKey = "_1adfkj234fjlk";
 
     @BeforeMethod
     protected void setUp() throws Exception {
@@ -99,7 +96,7 @@ public class RallyRestApiTest {
         getResult.add("Warnings", new JsonArray());
         getResult.addProperty(SECURITY_TOKEN_KEY, securityToken);
         JsonObject response = new JsonObject();
-        response.add(OPERATION_RESULT_KEY, getResult);
+        response.add("OperationResult", getResult);
 
         GetResponse toBeReturned = new GetResponse(new Gson().toJson(response));
         doReturn(toBeReturned).when(apiSpy).get(any(GetRequest.class), eq(true));
@@ -326,10 +323,21 @@ public class RallyRestApiTest {
         assertEquals(attachTokenCount, 0);
     }
 
+    public void shouldSendApiKeyHeader() throws Exception {
+        api = new RallyRestApi(server, apiKey);
+        JsonObject response = new JsonObject();
+
+        RallyRestApi apiSpy = spy(api);
+        doReturn(new Gson().toJson(response)).when(apiSpy).doRequest(any(HttpRequestBase.class));
+
+        apiSpy.doPost("url", "body");
+        verify(apiSpy).doRequest(argThat(new HttpRequestHeaderMatcher(API_KEY_HEADER, apiKey)));
+    }
+
     private JsonObject buildQueryResponse(int totalResultCount) {
         JsonObject response = new JsonObject();
         JsonObject queryResult = new JsonObject();
-        response.add(QUERY_RESULT_KEY, queryResult);
+        response.add("QueryResult", queryResult);
         queryResult.add("Errors", new JsonArray());
         queryResult.add("Warnings", new JsonArray());
         queryResult.add("Results", new JsonArray());
@@ -359,13 +367,12 @@ public class RallyRestApiTest {
         Assert.assertTrue(createResponse.wasSuccessful());
         JsonObject createdObj = createResponse.getObject();
         assertEquals(createdObj.get("_ref").getAsString(), "/defect/1234.js");
-        //assertEquals(attachTokenCount, 1);
     }
 
     private void assertCanUpdate() throws Exception {
         JsonObject response = new JsonObject();
         JsonObject updateResult = new JsonObject();
-        response.add(OPERATION_RESULT_KEY, updateResult);
+        response.add("OperationResult", updateResult);
         updateResult.add("Errors", new JsonArray());
         updateResult.add("Warnings", new JsonArray());
         JsonObject object = new JsonObject();
@@ -389,7 +396,7 @@ public class RallyRestApiTest {
     private void assertCanDelete() throws Exception {
         JsonObject response = new JsonObject();
         JsonObject deleteResult = new JsonObject();
-        response.add(OPERATION_RESULT_KEY, deleteResult);
+        response.add("OperationResult", deleteResult);
         deleteResult.add("Errors", new JsonArray());
         deleteResult.add("Warnings", new JsonArray());
 
@@ -409,6 +416,23 @@ public class RallyRestApiTest {
                 HttpEntityEnclosingRequestBase h = (HttpEntityEnclosingRequestBase) o;
                 Header contentType = h.getEntity().getContentType();
                 return contentType.getValue().toLowerCase().contains("utf-8");
+            }
+            return false;
+        }
+    }
+
+    class HttpRequestHeaderMatcher extends ArgumentMatcher<HttpEntityEnclosingRequestBase> {
+        private String name;
+        private String value;
+        public HttpRequestHeaderMatcher(String name, String value) {
+            this.name = name;
+            this.value = value;
+        }
+        public boolean matches(Object o) {
+            if (o instanceof HttpEntityEnclosingRequestBase) {
+                HttpEntityEnclosingRequestBase h = (HttpEntityEnclosingRequestBase) o;
+                Header header = h.getFirstHeader(name);
+                return header.getValue().equals(value);
             }
             return false;
         }
