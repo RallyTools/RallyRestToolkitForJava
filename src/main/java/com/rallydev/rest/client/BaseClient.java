@@ -13,7 +13,6 @@ import org.apache.http.conn.params.ConnRoutePNames;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-import sun.security.krb5.internal.ccache.CredentialsCache;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -36,10 +35,10 @@ public abstract class BaseClient implements Closeable {
 
     private Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v2.0.5");
+            put(Header.Library, "Rally Rest API for Java v2.1.0");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "2.0.5");
+            put(Header.Version, "2.1.0");
         }
     };
 

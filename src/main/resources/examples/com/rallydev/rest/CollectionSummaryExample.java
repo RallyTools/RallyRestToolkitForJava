@@ -23,21 +23,24 @@ public class CollectionSummaryExample {
         RallyRestApi restApi = RestApiFactory.getRestApi();
 
         try {
-            String ref = "/hierarchicalrequirement/12544729477";
-            GetRequest getRequest = new GetRequest(ref);
-            getRequest.setFetch(new Fetch("Defects:summary[Priority;State]"));
-            
-            System.out.println(String.format("\nSummarizing defects on story %s...", ref));
-            GetResponse getResponse = restApi.get(getRequest);
-            JsonObject story = getResponse.getObject();
+            //Get a story with defects
+            System.out.println("\nQuerying for stories with defects...");
+            QueryRequest storiesWithDefects = new QueryRequest("hierarchicalrequirement");
+            storiesWithDefects.setQueryFilter(new QueryFilter("Defects.ObjectID", "!=", null));
+            storiesWithDefects.setFetch(new Fetch("FormattedID", "Name", "Defects:summary[Priority;State]"));
+            QueryResponse storiesWithDefectsResponse = restApi.query(storiesWithDefects);
+            JsonObject story = storiesWithDefectsResponse.getResults().get(0).getAsJsonObject();
+            System.out.println(String.format("Found: %s - %s", story.get("FormattedID").getAsString(), story.get("Name").getAsString()));
+
+            System.out.println(String.format("\nSummarizing defects..."));
             JsonObject defectSummary = story.getAsJsonObject("Summary").getAsJsonObject("Defects");
-            
+
             System.out.println(String.format("\nTotal defects: %d", defectSummary.get("Count").getAsInt()));
-            
+
             System.out.println("\nBy Priority:");
             JsonObject prioritySummary = defectSummary.getAsJsonObject("Priority");
             for(Map.Entry<String, JsonElement> summaryItem : prioritySummary.entrySet()) {
-                System.out.println(String.format("\t%s - %d", summaryItem.getKey(), summaryItem.getValue().getAsInt()));    
+                System.out.println(String.format("\t%s - %d", summaryItem.getKey(), summaryItem.getValue().getAsInt()));
             }
 
             System.out.println("\nBy State:");
