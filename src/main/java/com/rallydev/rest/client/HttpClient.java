@@ -20,11 +20,11 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class BaseClient implements Closeable {
+public abstract class HttpClient extends DefaultHttpClient
+    implements Closeable {
 
-    protected DefaultHttpClient httpClient;
     protected URI server;
-    protected String wsapiVersion;
+    protected String wsapiVersion = "v2.0";
 
     private enum Header {
         Library,
@@ -42,10 +42,8 @@ public abstract class BaseClient implements Closeable {
         }
     };
 
-    protected BaseClient(URI server, String wsapiVersion) {
+    protected HttpClient(URI server) {
         this.server = server;
-        this.wsapiVersion = wsapiVersion;
-        this.httpClient = new DefaultHttpClient();
     }
 
     /**
@@ -54,7 +52,7 @@ public abstract class BaseClient implements Closeable {
      * @param proxy The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
      */
     public void setProxy(URI proxy) {
-        httpClient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        this.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
     }
 
     /**
@@ -76,7 +74,7 @@ public abstract class BaseClient implements Closeable {
      * @param value The vendor header to be included on all requests.
      */
     public void setApplicationVendor(String value) {
-        headers.put(BaseClient.Header.Vendor, value);
+        headers.put(Header.Vendor, value);
     }
 
     /**
@@ -86,7 +84,7 @@ public abstract class BaseClient implements Closeable {
      * @param value The vendor header to be included on all requests.
      */
     public void setApplicationVersion(String value) {
-        headers.put(BaseClient.Header.Version, value);
+        headers.put(Header.Version, value);
     }
 
     /**
@@ -96,7 +94,16 @@ public abstract class BaseClient implements Closeable {
      * @param value The vendor header to be included on all requests.
      */
     public void setApplicationName(String value) {
-        headers.put(BaseClient.Header.Name, value);
+        headers.put(Header.Name, value);
+    }
+
+    /**
+     * Get the current server being targeted.
+     *
+     * @return the current server.
+     */
+    public String getServer() {
+        return server.toString();
     }
 
     /**
@@ -118,17 +125,6 @@ public abstract class BaseClient implements Closeable {
     }
 
     /**
-     * Get the underlying http client implementation.
-     * This is exposed with the intent of providing the ability to supply additional configuration to the client.
-     * It should not be used to directly make i/o calls.
-     *
-     * @return the raw http client
-     */
-    public DefaultHttpClient getRawHttpClient() {
-        return httpClient;
-    }
-
-    /**
      * Execute a request against the WSAPI
      *
      * @param request the request to be executed
@@ -141,7 +137,19 @@ public abstract class BaseClient implements Closeable {
             request.setHeader("X-RallyIntegration" + header.getKey().name(), header.getValue());
         }
 
-        HttpResponse response = httpClient.execute(request);
+        return this.executeRequest(request);
+    }
+
+    /**
+     * Execute a request against the WSAPI
+     *
+     * @param request the request to be executed
+     * @return the JSON encoded string response
+     * @throws IOException if a non-200 response code is returned or if some other
+     *                     problem occurs while executing the request
+     */
+    protected String executeRequest(HttpRequestBase request) throws IOException {
+        HttpResponse response = this.execute(request);
         HttpEntity entity = response.getEntity();
         if (response.getStatusLine().getStatusCode() == 200) {
             return EntityUtils.toString(entity, "utf-8");
@@ -216,12 +224,12 @@ public abstract class BaseClient implements Closeable {
      * @throws IOException if an error occurs releasing resources
      */
     public void close() throws IOException {
-        httpClient.getConnectionManager().shutdown();
+        this.getConnectionManager().shutdown();
     }
 
     protected Credentials setClientCredentials(URI server, String userName, String password) {
         UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(userName, password);
-        httpClient.getCredentialsProvider().setCredentials(new AuthScope(server.getHost(), server.getPort()), credentials);
+        this.getCredentialsProvider().setCredentials(new AuthScope(server.getHost(), server.getPort()), credentials);
         return credentials;
     }
 
@@ -230,7 +238,7 @@ public abstract class BaseClient implements Closeable {
      *
      * @return the fully qualified WSAPI base url, e.g. https://rally1.rallydev.com/slm/webservice/1.33
      */
-    protected String getWsapiUrl() {
-        return server.toString() + "/slm/webservice/" + wsapiVersion;
+    public String getWsapiUrl() {
+        return getServer() + "/slm/webservice/" + getWsapiVersion();
     }
 }

@@ -2,8 +2,8 @@ package com.rallydev.rest;
 
 import com.google.gson.JsonArray;
 import com.rallydev.rest.client.ApiKeyClient;
-import com.rallydev.rest.client.BaseClient;
 import com.rallydev.rest.client.BasicAuthClient;
+import com.rallydev.rest.client.HttpClient;
 import com.rallydev.rest.request.CreateRequest;
 import com.rallydev.rest.request.DeleteRequest;
 import com.rallydev.rest.request.GetRequest;
@@ -25,12 +25,7 @@ import java.net.URI;
  */
 public class RallyRestApi implements Closeable {
 
-    /**
-     * The default version of the WSAPI to target.
-     */
-    private static final String DEFAULT_WSAPI_VERSION = "v2.0";
-
-    protected BaseClient client;
+    protected HttpClient client;
 
     /**
      * Creates a new instance for the specified server using the specified credentials.
@@ -41,7 +36,7 @@ public class RallyRestApi implements Closeable {
      * @deprecated Use the api key constructor instead.
      */
     public RallyRestApi(URI server, String userName, String password) {
-        this(new BasicAuthClient(server, DEFAULT_WSAPI_VERSION, userName, password));
+        this(new BasicAuthClient(server, userName, password));
     }
 
     /**
@@ -51,10 +46,10 @@ public class RallyRestApi implements Closeable {
      * @param apiKey The API Key to be used for authentication.
      */
     public RallyRestApi(URI server, String apiKey) {
-        this(new ApiKeyClient(server, DEFAULT_WSAPI_VERSION, apiKey));
+        this(new ApiKeyClient(server, apiKey));
     }
 
-    protected RallyRestApi(BaseClient httpClient) {
+    protected RallyRestApi(HttpClient httpClient) {
         this.client = httpClient;
     }
 
@@ -191,32 +186,13 @@ public class RallyRestApi implements Closeable {
     }
 
     /**
-     * Get the current version of the WSAPI being targeted.
-     * Defaults to {@link RallyRestApi#DEFAULT_WSAPI_VERSION}
-     *
-     * @return the current WSAPI version.
-     */
-    public String getWsapiVersion() {
-        return client.getWsapiVersion();
-    }
-
-    /**
-     * Set the current version of the WSAPI being targeted.
-     *
-     * @param wsapiVersion the new version, e.g. {@code "1.30"}
-     */
-    public void setWsapiVersion(String wsapiVersion) {
-        client.setWsapiVersion(wsapiVersion);
-    }
-
-    /**
      * Get the underlying http client implementation.
      * This is exposed with the intent of providing the ability to supply additional configuration to the client.
      * It should not be used to directly make i/o calls.
      *
      * @return the raw http client
      */
-    public BaseClient getClient() {
+    public HttpClient getClient() {
         return client;
     }
 }
