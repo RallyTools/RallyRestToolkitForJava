@@ -10,7 +10,7 @@
     <name>Rally Rest Toolkit For Java</name>
     <groupId>com.rallydev.rest</groupId>
     <artifactId>rally-rest-api</artifactId>
-    <version>2.1.2-SNAPSHOT</version>
+    <version>2.1.1-SNAPSHOT</version>
 
     <description>A java toolkit for interacting with the Rally Rest API</description>
 
@@ -77,7 +77,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.4.4</version>
+                <version>1.6.2</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
