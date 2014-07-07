@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ArtifactManager">
-    <artifact type="jar" build-on-make="true" name="rally-rest-api-2.1.0">
-      <output-path>$PROJECT_DIR$/out/artifacts/rally_rest_api_2_1_0</output-path>
-      <root id="archive" name="rally-rest-api-2.1.0.jar">
+    <artifact type="jar" build-on-make="true" name="rally-rest-api-2.1.1">
+      <output-path>$PROJECT_DIR$/out/artifacts/rally_rest_api_2_1_1</output-path>
+      <root id="archive" name="rally-rest-api-2.1.1jar">
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
         </element>
