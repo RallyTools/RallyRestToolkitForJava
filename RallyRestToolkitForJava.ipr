@@ -60,7 +60,7 @@
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
     <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
     <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="-use -windowtitle &quot;Rally Rest API for Java 2.0&quot; -doctitle &quot;Rally Rest API for Java 2.0&quot; -link http://docs.oracle.com/javase/7/docs/api/ -link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/ -link http://hc.apache.org/httpcomponents-core-4.2.x/httpcore/apidocs/ -link http://hc.apache.org/httpcomponents-client-4.2.x/httpclient/apidocs/" />
+    <option name="OTHER_OPTIONS" value="-use -windowtitle &quot;Rally Rest API for Java 2.1&quot; -doctitle &quot;Rally Rest API for Java 2.1&quot; -link http://docs.oracle.com/javase/7/docs/api/ -link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/ -link http://hc.apache.org/httpcomponents-core-4.2.x/httpcore/apidocs/ -link http://hc.apache.org/httpcomponents-client-4.2.x/httpclient/apidocs/" />
     <option name="HEAP_SIZE" />
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
