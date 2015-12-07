@@ -26,7 +26,21 @@ public class Ref {
             Pattern.compile(".*?/(\\w+)/(-?\\d+)(?:\\.js\\??.*)*$"),
             
             //permission ref (/workspacepermission/123u456w1)
-            Pattern.compile(".*?/(\\w+)/(\\d+u\\d+[pw]\\d+)(?:\\.js\\??.*)*$")
+            Pattern.compile(".*?/(\\w+)/(\\d+u\\d+[pw]\\d+)(?:\\.js\\??.*)*$"),
+            
+            //adding UUID regex support in the ref urls
+            
+            //dynatype collection ref (/portfolioitem/feature/81348db8-aacd-447e-8678-2fb910ae9dc3
+            Pattern.compile(".*?/(\\w{2,}/\\w+)/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/\\w+)(?:\\.js\\??.*)*$"),
+            
+            //dynatype ref (/portfolioitem/feature/81348db8-aacd-447e-8678-2fb910ae9dc3
+            Pattern.compile(".*?/(\\w{2,}/\\w+)/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})(?:\\.js\\??.*)*$"),
+
+            //collection ref (/defect/81348db8-aacd-447e-8678-2fb910ae9dc3/tasks)
+            Pattern.compile(".*?/(\\w+/-?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/(\\w+)(?:\\.js\\??.*)*$"),
+            
+            //basic ref (/defect/81348db8-aacd-447e-8678-2fb910ae9dc3)
+            Pattern.compile(".*?/(\\w+)/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})(?:\\.js\\??.*)*$")
     ));
     
     private static Matcher match(String ref) {
