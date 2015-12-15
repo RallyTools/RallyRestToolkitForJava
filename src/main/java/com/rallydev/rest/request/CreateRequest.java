@@ -1,15 +1,12 @@
 package com.rallydev.rest.request;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.rallydev.rest.util.Fetch;
-import com.rallydev.rest.util.Ref;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -40,7 +37,7 @@ public class CreateRequest extends Request {
     public String getBody() {
         JsonObject wrapper = new JsonObject();
         wrapper.add(type, obj);
-        return new Gson().toJson(wrapper);
+        return gsonBuilder.create().toJson(wrapper);
     }
 
     /**

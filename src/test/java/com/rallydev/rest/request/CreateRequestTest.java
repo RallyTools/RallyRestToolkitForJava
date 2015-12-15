@@ -1,5 +1,6 @@
 package com.rallydev.rest.request;
 
+import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.rallydev.rest.util.Fetch;
 import org.apache.http.client.utils.URLEncodedUtils;
@@ -14,6 +15,16 @@ public class CreateRequestTest {
         body.addProperty("Name", "My Story");
         CreateRequest req = new CreateRequest("HierarchicalRequirement", body);
         Assert.assertEquals(req.getBody(), "{\"HierarchicalRequirement\":{\"Name\":\"My Story\"}}");
+    }
+
+    @Test
+    public void shouldCreateACorrectBodyWithNullFields() {
+        JsonObject body = new JsonObject();
+        body.addProperty("Name", "My Story");
+        body.add("Feature", JsonNull.INSTANCE);
+        CreateRequest req = new CreateRequest("HierarchicalRequirement", body);
+        req.getGsonBuilder().serializeNulls();
+        Assert.assertEquals(req.getBody(), "{\"HierarchicalRequirement\":{\"Name\":\"My Story\",\"Feature\":null}}");
     }
 
     @Test
