@@ -1,5 +1,6 @@
 package com.rallydev.rest.request;
 
+import com.google.gson.GsonBuilder;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.testng.Assert;
@@ -44,5 +45,20 @@ public class RequestTest {
         r.setParams(params);
         Assert.assertSame(params, r.getParams());
         Assert.assertEquals(r.getParams().size(), 1);
+    }
+
+    @Test
+    public void shouldBeAbleToSetGsonBuilder() {
+        Request r = createRequest();
+        Assert.assertEquals(r.getParams().size(), 0);
+
+        GsonBuilder previous = r.getGsonBuilder();
+        GsonBuilder brandNew = new GsonBuilder();
+
+        r.setGsonBuilder(brandNew);
+
+        Assert.assertNotNull(r.getGsonBuilder());
+        Assert.assertSame(r.getGsonBuilder(), brandNew);
+        Assert.assertNotSame(brandNew, previous);
     }
 }

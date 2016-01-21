@@ -1,6 +1,5 @@
 package com.rallydev.rest.request;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.Ref;
@@ -39,7 +38,7 @@ public class UpdateRequest extends Request {
     public String getBody() {
         JsonObject wrapper = new JsonObject();
         wrapper.add(Ref.getTypeFromRef(ref), obj);
-        return new Gson().toJson(wrapper);
+        return gsonBuilder.create().toJson(wrapper);
     }
 
     /**

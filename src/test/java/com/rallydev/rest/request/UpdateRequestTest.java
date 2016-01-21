@@ -1,5 +1,6 @@
 package com.rallydev.rest.request;
 
+import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.rallydev.rest.util.Fetch;
 import org.testng.Assert;
@@ -13,6 +14,16 @@ public class UpdateRequestTest {
         body.addProperty("Name", "My Story");
         UpdateRequest req = new UpdateRequest("https://rally1.rallydev.com/slm/webservice/1.32/hierarchicalrequirement/1234.js", body);
         Assert.assertEquals(req.getBody(), "{\"hierarchicalrequirement\":{\"Name\":\"My Story\"}}");
+    }
+
+    @Test
+    public void shouldCreateACorrectBodyWithNullFields() {
+        JsonObject body = new JsonObject();
+        body.addProperty("Name", "My Story");
+        body.add("Feature", JsonNull.INSTANCE);
+        UpdateRequest req = new UpdateRequest("https://rally1.rallydev.com/slm/webservice/1.32/hierarchicalrequirement/1234.js", body);
+        req.getGsonBuilder().serializeNulls();
+        Assert.assertEquals(req.getBody(), "{\"hierarchicalrequirement\":{\"Name\":\"My Story\",\"Feature\":null}}");
     }
 
     @Test

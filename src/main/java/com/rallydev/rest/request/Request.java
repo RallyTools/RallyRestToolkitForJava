@@ -1,5 +1,6 @@
 package com.rallydev.rest.request;
 
+import com.google.gson.GsonBuilder;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
@@ -14,10 +15,16 @@ public abstract class Request {
     
     private List<NameValuePair> params = new ArrayList<NameValuePair>();
 
+	/**
+     * Gson Builder used for JSON serialization in this request.
+     */
+    protected GsonBuilder gsonBuilder;
+
     /**
      * Create a new request.
      */
     public Request() {
+        this.gsonBuilder = new GsonBuilder();
     }
 
     /**
@@ -46,6 +53,24 @@ public abstract class Request {
      */
     public void addParam(String name, String value) {
         getParams().add(new BasicNameValuePair(name, value));
+    }
+
+    /**
+     * Get the Gson Builder used for JSON serialization in this request.
+     *
+     * @return The Gson Builder used for JSON serialization
+     */
+    public GsonBuilder getGsonBuilder() {
+        return gsonBuilder;
+    }
+
+    /**
+     * Set the Gson Builder used for JSON serialization in this request.
+     *
+     * @param gsonBuilder The Gson Builder used for JSON serialization
+     */
+    public void setGsonBuilder(GsonBuilder gsonBuilder) {
+        this.gsonBuilder = gsonBuilder;
     }
 
     /**
