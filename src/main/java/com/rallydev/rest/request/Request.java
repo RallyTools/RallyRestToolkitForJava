@@ -24,7 +24,7 @@ public abstract class Request {
      * Create a new request.
      */
     public Request() {
-        this.gsonBuilder = new GsonBuilder();
+        this.gsonBuilder = new GsonBuilder().serializeNulls();
     }
 
     /**

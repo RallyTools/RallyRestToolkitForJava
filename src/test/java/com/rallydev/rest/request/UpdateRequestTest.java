@@ -17,12 +17,11 @@ public class UpdateRequestTest {
     }
 
     @Test
-    public void shouldCreateACorrectBodyWithNullFields() {
+    public void shouldCreateACorrectBodyWithNullFieldsByDefault() {
         JsonObject body = new JsonObject();
         body.addProperty("Name", "My Story");
         body.add("Feature", JsonNull.INSTANCE);
         UpdateRequest req = new UpdateRequest("https://rally1.rallydev.com/slm/webservice/1.32/hierarchicalrequirement/1234.js", body);
-        req.getGsonBuilder().serializeNulls();
         Assert.assertEquals(req.getBody(), "{\"hierarchicalrequirement\":{\"Name\":\"My Story\",\"Feature\":null}}");
     }
 
