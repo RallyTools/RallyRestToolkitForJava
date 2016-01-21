@@ -58,13 +58,14 @@ public class BasicAuthClient extends HttpClient {
 
     /**
      * Attach the security token parameter to the request.
-     * <p/>
+     *
      * Response Structure:
      * {"OperationResult": {"SecurityToken": "UUID"}}
      *
      * @param request the request to be modified
      * @throws IOException if a non-200 response code is returned or if some other
      *                     problem occurs while executing the request
+     * @throws URISyntaxException if there is a problem with the url in the request
      */
     protected void attachSecurityInfo(HttpRequestBase request) throws IOException, URISyntaxException {
         if (!SECURITY_ENDPOINT_DOES_NOT_EXIST.equals(securityToken)) {
