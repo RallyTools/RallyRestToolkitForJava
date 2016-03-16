@@ -1,5 +1,6 @@
 com.rallydev.rest
 com.rallydev.rest.client
+com.rallydev.rest.matchers
 com.rallydev.rest.request
 com.rallydev.rest.response
 com.rallydev.rest.util

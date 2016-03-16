@@ -4,16 +4,8 @@ import com.google.gson.JsonArray;
 import com.rallydev.rest.client.ApiKeyClient;
 import com.rallydev.rest.client.BasicAuthClient;
 import com.rallydev.rest.client.HttpClient;
-import com.rallydev.rest.request.CreateRequest;
-import com.rallydev.rest.request.DeleteRequest;
-import com.rallydev.rest.request.GetRequest;
-import com.rallydev.rest.request.QueryRequest;
-import com.rallydev.rest.request.UpdateRequest;
-import com.rallydev.rest.response.CreateResponse;
-import com.rallydev.rest.response.DeleteResponse;
-import com.rallydev.rest.response.GetResponse;
-import com.rallydev.rest.response.QueryResponse;
-import com.rallydev.rest.response.UpdateResponse;
+import com.rallydev.rest.request.*;
+import com.rallydev.rest.response.*;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -142,6 +134,18 @@ public class RallyRestApi implements Closeable {
      */
     public UpdateResponse update(UpdateRequest request) throws IOException {
         return new UpdateResponse(client.doPost(request.toUrl(), request.getBody()));
+    }
+
+    /**
+     * Update the specified collection.
+     * Note that this method is only usable with WSAPI versions 2.0 and above.
+     *
+     * @param request the {@link CollectionUpdateRequest} specifying the collection to be updated.
+     * @return the resulting {@link CollectionUpdateResponse}
+     * @throws IOException if an error occurs during the update.
+     */
+    public CollectionUpdateResponse updateCollection(CollectionUpdateRequest request) throws IOException {
+        return new CollectionUpdateResponse(client.doPost(request.toUrl(), request.getBody()));
     }
 
     /**

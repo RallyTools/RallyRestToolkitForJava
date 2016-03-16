@@ -2,13 +2,10 @@ package com.rallydev.rest;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.rallydev.rest.request.GetRequest;
 import com.rallydev.rest.request.QueryRequest;
-import com.rallydev.rest.response.GetResponse;
 import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
-import com.rallydev.rest.util.Ref;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

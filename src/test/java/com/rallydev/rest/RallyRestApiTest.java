@@ -5,16 +5,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rallydev.rest.client.ApiKeyClient;
 import com.rallydev.rest.client.BasicAuthClient;
-import com.rallydev.rest.request.CreateRequest;
-import com.rallydev.rest.request.DeleteRequest;
-import com.rallydev.rest.request.GetRequest;
-import com.rallydev.rest.request.QueryRequest;
-import com.rallydev.rest.request.UpdateRequest;
-import com.rallydev.rest.response.CreateResponse;
-import com.rallydev.rest.response.DeleteResponse;
-import com.rallydev.rest.response.GetResponse;
-import com.rallydev.rest.response.QueryResponse;
-import com.rallydev.rest.response.UpdateResponse;
+import com.rallydev.rest.request.*;
+import com.rallydev.rest.response.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -131,6 +123,31 @@ public class RallyRestApiTest {
         Assert.assertTrue(updateResponse.wasSuccessful());
         JsonObject obj = updateResponse.getObject();
         assertEquals(obj.get("_ref").getAsString(), "/defect/1234");
+    }
+
+    public void shouldUpdateCollection() throws Exception {
+        JsonObject response = new JsonObject();
+        JsonObject result = new JsonObject();
+        response.add("OperationResult", result);
+        result.add("Errors", new JsonArray());
+        result.add("Warnings", new JsonArray());
+        JsonArray results = new JsonArray();
+        JsonObject tag = new JsonObject();
+        tag.addProperty("_ref", "/tag/23456");
+        results.add(tag);
+        result.add("Results", results);
+
+        JsonArray updatedTags = new JsonArray();
+
+        updatedTags.add(tag);
+        CollectionUpdateRequest request = new CollectionUpdateRequest("/defect/1234/tags", updatedTags, true);
+        doReturn(new Gson().toJson(response)).when(api.client).doPost(request.toUrl(), request.getBody());
+        CollectionUpdateResponse updateResponse = api.updateCollection(request);
+
+        verify(api.client).doPost(request.toUrl(), request.getBody());
+        Assert.assertTrue(updateResponse.wasSuccessful());
+        JsonArray updateResults = updateResponse.getResults();
+        assertEquals(updateResults.get(0).getAsJsonObject().get("_ref").getAsString(), "/tag/23456");
     }
 
     public void shouldDelete() throws Exception {
