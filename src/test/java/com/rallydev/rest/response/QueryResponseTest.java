@@ -27,8 +27,8 @@ public class QueryResponseTest {
         Assert.assertEquals(r.getErrors().length, 0, "Error length correct");
         Assert.assertEquals(r.getTotalResultCount(), 2, "Total result count correct");
         Assert.assertEquals(r.getResults().size(), 2, "Result length correct");
-        Assert.assertEquals(r.getResults().get(0).getAsJsonObject().get("Foo").getAsInt(), 7, "First error correct");
-        Assert.assertEquals(r.getResults().get(1).getAsJsonObject().get("Foo").getAsInt(), 1, "First error correct");
+        Assert.assertEquals(r.getResults().get(0).getAsJsonObject().get("Foo").getAsInt(), 7, "First result correct");
+        Assert.assertEquals(r.getResults().get(1).getAsJsonObject().get("Foo").getAsInt(), 1, "First result correct");
         Assert.assertTrue(r.wasSuccessful());
         Assert.assertEquals(r.getPageSize(), 20);
         Assert.assertEquals(r.getStart(), 1);

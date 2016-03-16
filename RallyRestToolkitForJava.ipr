@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ArtifactManager">
-    <artifact type="jar" build-on-make="true" name="rally-rest-api-2.1.1">
-      <output-path>$PROJECT_DIR$/out/artifacts/rally_rest_api_2_1_1</output-path>
-      <root id="archive" name="rally-rest-api-2.1.1jar">
+    <artifact type="jar" build-on-make="true" name="rally-rest-api-2.2.1">
+      <output-path>$PROJECT_DIR$/out/artifacts/rally_rest_api_2_2.1</output-path>
+      <root id="archive" name="rally-rest-api-2.2.1.1jar">
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
         </element>
@@ -46,6 +46,7 @@
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
@@ -63,7 +64,7 @@
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
     <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
     <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="-use -windowtitle &quot;Rally Rest API for Java 2.1&quot; -doctitle &quot;Rally Rest API for Java 2.1&quot; -link http://docs.oracle.com/javase/7/docs/api/ -link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/ -link http://hc.apache.org/httpcomponents-core-4.2.x/httpcore/apidocs/ -link http://hc.apache.org/httpcomponents-client-4.2.x/httpclient/apidocs/" />
+    <option name="OTHER_OPTIONS" value="-use -windowtitle &quot;Rally Rest API for Java 2.2&quot; -doctitle &quot;Rally Rest API for Java 2.2&quot; -link http://docs.oracle.com/javase/7/docs/api/ -link http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/ -link http://hc.apache.org/httpcomponents-core-4.2.x/httpcore/apidocs/ -link http://hc.apache.org/httpcomponents-client-4.2.x/httpclient/apidocs/" />
     <option name="HEAP_SIZE" />
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />

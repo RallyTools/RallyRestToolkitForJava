@@ -39,10 +39,10 @@ public class HttpClient extends DefaultHttpClient
 
     private Map<Header, String> headers = new HashMap<Header, String>() {
         {
-            put(Header.Library, "Rally Rest API for Java v2.1.2");
+            put(Header.Library, "Rally Rest API for Java v2.2.1");
             put(Header.Name, "Rally Rest API for Java");
             put(Header.Vendor, "Rally Software, Inc.");
-            put(Header.Version, "2.1.2");
+            put(Header.Version, "2.2.1");
         }
     };
 
