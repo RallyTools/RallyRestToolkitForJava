@@ -244,4 +244,13 @@ public class HttpClient extends DefaultHttpClient
     public String getWsapiUrl() {
         return getServer() + "/slm/webservice/" + getWsapiVersion();
     }
+    
+    /**
+     * Get the Header map used for every Request. Which can be used to put any consumer/client specific headers in the Request 
+     * @return the header map of the Request
+     */
+    public Map<Header, String> getHeaders()
+    {
+      return headers;
+    }
 }
