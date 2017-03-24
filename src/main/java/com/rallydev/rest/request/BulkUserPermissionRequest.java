@@ -29,14 +29,14 @@ public class BulkUserPermissionRequest extends Request {
      *            The OIDs of any child Project (or a child of a child, or any ancestor to any level) under the root project which are to be excluded from the
      *            permission change operation.
      * @param rootProjectOID
-     *            The OID of the root of the Project tree of which to change the permissions for the given user.  The user's Project permission for all Projects
-     *            rooted at this one will be changed, unless (see below for further explanation)
+     *            The OID of the root of the Project tree of which to change the permissions for the given user. The user's Project permission for all Projects
+     *            rooted at this one will be changed, unless (see below for further explanation)
      *            the Project is on the exclusions list, or
      *            the operation would result in a downgrade but the force downgrade parameters was not set to tree.
      * @param permission
-     *            The permission to grant.  Must be one of No Access, Viewer, Editor, or Project Admin.
+     *            The permission to grant. Must be one of No Access, Viewer, Editor, or Project Admin.
      * @param forceDowngradePermissions
-     *            If you intend to downgrade any existing project permissions, set this to true.
+     *            If you intend to downgrade any existing project permissions, set this to true.
      */
     public BulkUserPermissionRequest(String userOID, Collection<String> excludedProjectOIDs, String rootProjectOID, String permission,
             boolean forceDowngradePermissions) {
