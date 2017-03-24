@@ -8,6 +8,7 @@ import com.google.gson.JsonArray;
 import com.rallydev.rest.client.ApiKeyClient;
 import com.rallydev.rest.client.BasicAuthClient;
 import com.rallydev.rest.client.HttpClient;
+import com.rallydev.rest.request.BulkUserPermissionRequest;
 import com.rallydev.rest.request.CollectionUpdateRequest;
 import com.rallydev.rest.request.CreateRequest;
 import com.rallydev.rest.request.DeleteRequest;
@@ -231,6 +232,17 @@ public class RallyRestApi implements Closeable {
      */
     public GetResponse get(GetRequest request) throws IOException {
         return new GetResponse(client.doGet(request.toUrl()));
+    }
+
+    /**
+     * Bulk update a given user's project permissions.
+     * 
+     * @param request
+     * @return
+     * @throws IOException
+     */
+    public CollectionUpdateResponse bulkUpdate(BulkUserPermissionRequest request) throws IOException {
+        return new CollectionUpdateResponse(client.doPost(request.toUrl(), ""));
     }
 
     /**
