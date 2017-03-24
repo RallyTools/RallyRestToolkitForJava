@@ -34,7 +34,7 @@ public class BulkUserPermissionRequest extends Request {
      *            the Project is on the exclusions list, or
      *            the operation would result in a downgrade but the force downgrade parameters was not set to tree.
      * @param permission
-     *            The permission to grant.  Must be one of No Access, Viewer, Editor, or Project Admin.
+     *            The permission to grant.  Must be one of No Access, Viewer, Editor, or Project Admin.
      * @param forceDowngradePermissions
      *            If you intend to downgrade any existing project permissions, set this to true.
      */
