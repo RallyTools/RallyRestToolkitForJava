@@ -237,9 +237,9 @@ public class RallyRestApi implements Closeable {
     /**
      * Bulk update a given user's project permissions.
      * 
-     * @param request
-     * @return
-     * @throws IOException
+     * @param request request the {@link BulkUserPermissionRequest} specifying the object to be retrieved.
+     * @return the resulting {@link CollectionUpdateResponse}
+     * @throws IOException if an error occurs during the retrieval.
      */
     public CollectionUpdateResponse bulkUpdate(BulkUserPermissionRequest request) throws IOException {
         return new CollectionUpdateResponse(client.doPost(request.toUrl(), ""));

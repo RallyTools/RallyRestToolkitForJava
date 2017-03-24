@@ -16,7 +16,7 @@ public class BulkUserPermissionRequest extends Request {
     private static final String PROJECTPERMISSION_BULKUPDATE = "/projectpermission/bulkupdate";
 
     private String userOID;
-    private Collection<String> excludedProjectOIDs;
+    private Collection<String> excludedRootProjectOIDs;
     private String rootProjectOID;
     private String permission;
     private boolean forceDowngradePermissions;
@@ -38,11 +38,11 @@ public class BulkUserPermissionRequest extends Request {
      * @param forceDowngradePermissions
      *            If you intend to downgrade any existing project permissions, set this to true.
      */
-    public BulkUserPermissionRequest(String userOID, Collection<String> excludedProjectOIDs, String rootProjectOID, String permission,
+    public BulkUserPermissionRequest(String userOID, Collection<String> excludedRootProjectOIDs, String rootProjectOID, String permission,
             boolean forceDowngradePermissions) {
         super();
         this.userOID = userOID;
-        this.excludedProjectOIDs = excludedProjectOIDs;
+        this.excludedRootProjectOIDs = excludedRootProjectOIDs;
         this.rootProjectOID = rootProjectOID;
         this.permission = permission;
         this.forceDowngradePermissions = forceDowngradePermissions;
@@ -56,8 +56,8 @@ public class BulkUserPermissionRequest extends Request {
         params.add(new BasicNameValuePair("permission", permission));
         params.add(new BasicNameValuePair("forceDowngradePermissions", Boolean.toString(forceDowngradePermissions)));
 
-        if (excludedProjectOIDs != null && !excludedProjectOIDs.isEmpty()) {
-            params.add(new BasicNameValuePair("excludedRootProjectOIDs", String.join(",", excludedProjectOIDs)));
+        if (excludedRootProjectOIDs != null && !excludedRootProjectOIDs.isEmpty()) {
+            params.add(new BasicNameValuePair("excludedRootProjectOIDs", String.join(",", excludedRootProjectOIDs)));
         }
 
         return String.format("%s?%s", PROJECTPERMISSION_BULKUPDATE, URLEncodedUtils.format(params, "utf-8"));
