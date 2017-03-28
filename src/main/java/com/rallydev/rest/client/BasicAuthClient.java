@@ -26,6 +26,8 @@ public class BasicAuthClient extends HttpClient {
     protected String securityToken;
     protected Credentials credentials;
 
+    private Object privateLock = new Object();
+
     /**
      * Construct a new client.
      * @param server the server to connect to
@@ -91,12 +93,14 @@ public class BasicAuthClient extends HttpClient {
     protected void attachSecurityInfo(HttpRequestBase request) throws IOException, URISyntaxException {
         if (!SECURITY_ENDPOINT_DOES_NOT_EXIST.equals(securityToken)) {
             try {
-                if (securityToken == null) {
-                    HttpGet httpGet = new HttpGet(getWsapiUrl() + SECURITY_TOKEN_URL);
-                    GetResponse getResponse = new GetResponse(doRequest(httpGet));
-                    JsonObject operationResult = getResponse.getObject();
-                    JsonPrimitive securityTokenPrimitive = operationResult.getAsJsonPrimitive(SECURITY_TOKEN_KEY);
-                    securityToken = securityTokenPrimitive.getAsString();
+                synchronized (privateLock) {
+                    if (securityToken == null) {
+                        HttpGet httpGet = new HttpGet(getWsapiUrl() + SECURITY_TOKEN_URL);
+                        GetResponse getResponse = new GetResponse(doRequest(httpGet));
+                        JsonObject operationResult = getResponse.getObject();
+                        JsonPrimitive securityTokenPrimitive = operationResult.getAsJsonPrimitive(SECURITY_TOKEN_KEY);
+                        securityToken = securityTokenPrimitive.getAsString();
+                    }
                 }
                 request.setURI(new URIBuilder(request.getURI()).addParameter(SECURITY_TOKEN_PARAM_KEY, securityToken).build());
             } catch (IOException e) {
