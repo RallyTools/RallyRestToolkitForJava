@@ -1,9 +1,9 @@
 package com.rallydev.rest.client;
 
-import org.apache.http.client.methods.HttpRequestBase;
-
 import java.io.IOException;
 import java.net.URI;
+
+import org.apache.http.client.methods.HttpRequestBase;
 
 /**
  * A HttpClient which authenticates using an API Key.
@@ -20,6 +20,17 @@ public class ApiKeyClient extends HttpClient {
      */
     public ApiKeyClient(URI server, String apiKey) {
         super(server);
+        this.apiKey = apiKey;
+    }
+
+    /**
+     * Construct a new client with a pre-configured HttpClient.
+     * 
+     * @param server the server to connect to
+     * @param apiKey the key to be used for authentication
+     */
+    public ApiKeyClient(URI server, String apiKey, org.apache.http.client.HttpClient httpClient) {
+        super(server, httpClient);
         this.apiKey = apiKey;
     }
 
