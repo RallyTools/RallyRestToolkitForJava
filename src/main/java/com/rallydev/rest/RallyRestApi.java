@@ -1,15 +1,26 @@
 package com.rallydev.rest;
 
+import java.io.Closeable;
+import java.io.IOException;
+import java.net.URI;
+
 import com.google.gson.JsonArray;
 import com.rallydev.rest.client.ApiKeyClient;
 import com.rallydev.rest.client.BasicAuthClient;
 import com.rallydev.rest.client.HttpClient;
-import com.rallydev.rest.request.*;
-import com.rallydev.rest.response.*;
-
-import java.io.Closeable;
-import java.io.IOException;
-import java.net.URI;
+import com.rallydev.rest.request.BulkUserPermissionRequest;
+import com.rallydev.rest.request.CollectionUpdateRequest;
+import com.rallydev.rest.request.CreateRequest;
+import com.rallydev.rest.request.DeleteRequest;
+import com.rallydev.rest.request.GetRequest;
+import com.rallydev.rest.request.QueryRequest;
+import com.rallydev.rest.request.UpdateRequest;
+import com.rallydev.rest.response.CollectionUpdateResponse;
+import com.rallydev.rest.response.CreateResponse;
+import com.rallydev.rest.response.DeleteResponse;
+import com.rallydev.rest.response.GetResponse;
+import com.rallydev.rest.response.QueryResponse;
+import com.rallydev.rest.response.UpdateResponse;
 
 /**
  * <p>The main interface to the Rest API.</p>
@@ -30,6 +41,19 @@ public class RallyRestApi implements Closeable {
     public RallyRestApi(URI server, String userName, String password) {
         this(new BasicAuthClient(server, userName, password));
     }
+    
+    /**
+     * Creates a new instance for the specified server using the specified credentials.
+     *
+     * @param server   The server to connect to, e.g. {@code new URI("https://rally1.rallydev.com")}
+     * @param userName The username to be used for authentication.
+     * @param password The password to be used for authentication.
+     * @param httpClient The pre-configured httpClient.
+     * @deprecated Use the api key constructor instead.
+     */
+    public RallyRestApi(URI server, String userName, String password, org.apache.http.client.HttpClient httpClient) {
+        this(new BasicAuthClient(server, userName, password, httpClient));
+    }
 
     /**
      * Creates a new instance for the specified server using the specified API Key.
@@ -39,6 +63,17 @@ public class RallyRestApi implements Closeable {
      */
     public RallyRestApi(URI server, String apiKey) {
         this(new ApiKeyClient(server, apiKey));
+    }
+
+    /**
+     * Creates a new instance for the specified server using the specified API Key and a pre-configured httpClient.
+     * 
+     * @param server The server to connect to, e.g. {@code new URI("https://rally1.rallydev.com")}
+     * @param apiKey The API Key to be used for authentication.
+     * @param httpClient The pre-configured httpClient.
+     */
+    public RallyRestApi(URI server, String apiKey, org.apache.http.client.HttpClient httpClient) {
+        this(new ApiKeyClient(server, apiKey, httpClient));
     }
 
     protected RallyRestApi(HttpClient httpClient) {
@@ -197,6 +232,17 @@ public class RallyRestApi implements Closeable {
      */
     public GetResponse get(GetRequest request) throws IOException {
         return new GetResponse(client.doGet(request.toUrl()));
+    }
+
+    /**
+     * Bulk update a given user's project permissions.
+     * 
+     * @param request request the {@link BulkUserPermissionRequest} specifying the object to be retrieved.
+     * @return the resulting {@link CollectionUpdateResponse}
+     * @throws IOException if an error occurs during the retrieval.
+     */
+    public CollectionUpdateResponse bulkUpdate(BulkUserPermissionRequest request) throws IOException {
+        return new CollectionUpdateResponse(client.doPost(request.toUrl(), ""));
     }
 
     /**

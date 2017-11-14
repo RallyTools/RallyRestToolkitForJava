@@ -1,16 +1,19 @@
 package com.rallydev.rest.response;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Represents a WSAPI response.
  */
 public abstract class Response {
+
+    private static final String ERRORS = "Errors";
+    private static final String WARNINGS = "Warnings";
 
     protected JsonObject result;
     protected String raw;
@@ -40,7 +43,7 @@ public abstract class Response {
      * @return the response errors
      */
     public String[] getErrors() {
-        return parseArray("Errors");
+        return result.has(ERRORS) ? parseArray(ERRORS) : new String[0];
     }
 
     /**
@@ -49,7 +52,7 @@ public abstract class Response {
      * @return the response warnings
      */
     public String[] getWarnings() {
-        return parseArray("Warnings");
+        return result.has(WARNINGS) ? parseArray(WARNINGS) : new String[0];
     }
 
     /**

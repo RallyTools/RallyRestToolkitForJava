@@ -1,24 +1,36 @@
 package com.rallydev.rest;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.rallydev.rest.client.ApiKeyClient;
-import com.rallydev.rest.client.BasicAuthClient;
-import com.rallydev.rest.request.*;
-import com.rallydev.rest.response.*;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
-import java.net.URI;
-
-import static org.mockito.Mockito.anyString;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.testng.Assert.assertEquals;
+
+import java.net.URI;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.rallydev.rest.client.ApiKeyClient;
+import com.rallydev.rest.client.BasicAuthClient;
+import com.rallydev.rest.request.BulkUserPermissionRequest;
+import com.rallydev.rest.request.CollectionUpdateRequest;
+import com.rallydev.rest.request.CreateRequest;
+import com.rallydev.rest.request.DeleteRequest;
+import com.rallydev.rest.request.GetRequest;
+import com.rallydev.rest.request.QueryRequest;
+import com.rallydev.rest.request.UpdateRequest;
+import com.rallydev.rest.response.CollectionUpdateResponse;
+import com.rallydev.rest.response.CreateResponse;
+import com.rallydev.rest.response.DeleteResponse;
+import com.rallydev.rest.response.GetResponse;
+import com.rallydev.rest.response.QueryResponse;
+import com.rallydev.rest.response.UpdateResponse;
 
 @Test
 public class RallyRestApiTest {
@@ -123,6 +135,24 @@ public class RallyRestApiTest {
         Assert.assertTrue(updateResponse.wasSuccessful());
         JsonObject obj = updateResponse.getObject();
         assertEquals(obj.get("_ref").getAsString(), "/defect/1234");
+    }
+
+    public void shouldBulkUserPermissionUpdate() throws Exception {
+        JsonObject response = new JsonObject();
+        JsonObject updateResult = new JsonObject();
+        response.add("OperationResult", updateResult);
+        JsonArray results = new JsonArray();
+        JsonObject tag = new JsonObject();
+        tag.addProperty("_ref", "/tag/23456");
+        results.add(tag);
+        response.add("Results", results);
+
+        BulkUserPermissionRequest request = new BulkUserPermissionRequest("1234,", null, "111", "Viewer", false);
+        doReturn(new Gson().toJson(response)).when(api.client).doPost(request.toUrl(), "");
+        CollectionUpdateResponse collectionUpdateResponse = api.bulkUpdate(request);
+
+        verify(api.client).doPost(request.toUrl(), "");
+        Assert.assertTrue(collectionUpdateResponse.wasSuccessful());
     }
 
     public void shouldUpdateCollection() throws Exception {
