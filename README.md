@@ -22,5 +22,7 @@ Please view the [Java Toolkit for Rally REST API User Guide](https://github.com/
 
 [Web Services API documentation](https://rally1.rallydev.com/slm/doc/webservice)
 
+[Examples](https://github.com/RallyCommunity/rally-java-rest-apps)
+
 ## Developer Guide
 Please view the [Developer Guide](https://github.com/RallyTools/RallyRestToolkitForJava/wiki/Developer-Guide) in the attached wiki
