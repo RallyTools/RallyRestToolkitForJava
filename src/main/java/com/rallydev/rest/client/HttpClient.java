@@ -1,23 +1,27 @@
 package com.rallydev.rest.client;
 
+import java.io.Closeable;
+import java.io.IOException;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.Credentials;
 import org.apache.http.auth.UsernamePasswordCredentials;
-import org.apache.http.client.methods.*;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.conn.params.ConnRoutePNames;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DecompressingHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-
-import java.io.Closeable;
-import java.io.IOException;
-import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * A HttpClient implementation providing connectivity to Rally.  This class does not
@@ -28,7 +32,7 @@ public class HttpClient extends DefaultHttpClient
 
     protected URI server;
     protected String wsapiVersion = "v2.0";
-    protected DecompressingHttpClient client;
+    protected org.apache.http.client.HttpClient client;
 
     private enum Header {
         Library,
@@ -49,6 +53,17 @@ public class HttpClient extends DefaultHttpClient
     protected HttpClient(URI server) {
         this.server = server;
         client = new DecompressingHttpClient(this);
+    }
+
+    /**
+     * Allow the user to specify a compliant HttpClient
+     * 
+     * @param server The URI of the remote server
+     * @param client A pre-configured HttpClient implementation
+     */
+    public HttpClient(URI server, org.apache.http.client.HttpClient client) {
+        this.server = server;
+        this.client = client;
     }
 
     /**
