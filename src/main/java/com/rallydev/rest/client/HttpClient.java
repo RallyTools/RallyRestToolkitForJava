@@ -226,7 +226,7 @@ public class HttpClient extends DefaultHttpClient
      *
      * @throws IOException if an error occurs releasing resources
      */
-    public void close() throws IOException {
+    public void close() {
         client.getConnectionManager().shutdown();
     }
 
