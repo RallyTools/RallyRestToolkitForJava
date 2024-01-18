@@ -54,16 +54,16 @@ public class RallyRestApi implements Closeable {
         client.setProxy(proxy);
     }
 
-    /**
-     * Set the authenticated proxy server to use.  By default no proxy is configured.
-     *
-     * @param proxy    The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
-     * @param userName The username to be used for authentication.
-     * @param password The password to be used for authentication.
-     */
-    public void setProxy(URI proxy, String userName, String password) {
-        client.setProxy(proxy, userName, password);
-    }
+//    /**
+//     * Set the authenticated proxy server to use.  By default no proxy is configured.
+//     *
+//     * @param proxy    The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
+//     * @param userName The username to be used for authentication.
+//     * @param password The password to be used for authentication.
+//     */
+//    public void setProxy(URI proxy, String userName, String password) {
+//        client.setProxy(proxy, userName, password);
+//    }
 
     /**
      * Set the value of the X-RallyIntegrationVendor header included on all requests.

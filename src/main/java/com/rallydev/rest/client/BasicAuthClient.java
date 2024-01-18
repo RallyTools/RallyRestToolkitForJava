@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.rallydev.rest.response.GetResponse;
 import org.apache.http.auth.Credentials;
+import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URIBuilder;
@@ -31,8 +32,8 @@ public class BasicAuthClient extends HttpClient {
      * @param password the password to be used for authentication
      */
     public BasicAuthClient(URI server, String userName, String password) {
-        super(server);
-        credentials = setClientCredentials(server, userName, password);
+        super(server, userName, password);
+        this.credentials = new UsernamePasswordCredentials(userName, password);
     }
 
     /**
