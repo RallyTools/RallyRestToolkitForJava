@@ -39,22 +39,31 @@ public class HttpClientTest {
         Assert.assertEquals(client.getServer(), server);
     }
 
-//    @Test
-//    public void shouldSetProxy() throws Exception {
-//        URI proxy = new URI("http://my.proxy.com:8000");
-//        client.setProxy(proxy);
-//        Assert.assertEquals(client.getParams().getParameter(ConnRoutePNames.DEFAULT_PROXY),
-//                new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
-//    }
+    @Test
+    public void shouldSetProxy() throws Exception {
+        URI proxy = new URI("http://my.proxy.com:8000");
+        client.setProxy(proxy);
+        HttpHost actualProxy = new HttpHost(
+                client.getProxy().getHost(),
+                client.getProxy().getPort(),
+                client.getProxy().getScheme());
+        Assert.assertEquals(actualProxy,
+                new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        verify(client).buildClient();
+    }
 
-//    @Test
-//    public void shouldSetProxyWithCredentials() throws Exception {
-//        URI proxy = new URI("http://my.proxy.com:8000");
-//        client.setProxy(proxy, "username", "password");
-//        Assert.assertEquals(client.getParams().getParameter(ConnRoutePNames.DEFAULT_PROXY),
-//                new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
-//        verify(client).setClientCredentials(proxy, "username", "password");
-//    }
+    @Test
+    public void shouldSetProxyWithCredentials() throws Exception {
+        URI proxy = new URI("http://my.proxy.com:8000");
+        client.setProxy(proxy, "username", "password");
+        HttpHost actualProxy = new HttpHost(
+                client.getProxy().getHost(),
+                client.getProxy().getPort(),
+                client.getProxy().getScheme());
+        Assert.assertEquals(actualProxy,
+                new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        verify(client).buildClient();
+    }
 
     @Test
     public void shouldSetApplicationVendor() throws Exception {

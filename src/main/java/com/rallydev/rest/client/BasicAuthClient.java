@@ -33,7 +33,7 @@ public class BasicAuthClient extends HttpClient {
      */
     public BasicAuthClient(URI server, String userName, String password) {
         super(server, userName, password);
-        this.credentials = new UsernamePasswordCredentials(userName, password);
+        resetCredentials(userName, password);
     }
 
     /**
@@ -86,5 +86,22 @@ public class BasicAuthClient extends HttpClient {
                 securityToken = SECURITY_ENDPOINT_DOES_NOT_EXIST;
             }
         }
+    }
+
+    /**
+     * Set the authenticated proxy server to use.  By default no proxy is configured.
+     *
+     * @param proxy    The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
+     * @param userName The username to be used for authentication.
+     * @param password The password to be used for authentication.
+     */
+    public void setProxy(URI proxy, String userName, String password) {
+        super.setProxy(proxy, userName, password);
+        resetCredentials(userName, password);
+    }
+
+    private void resetCredentials(String userName, String password) {
+        this.credentials = new UsernamePasswordCredentials(userName, password);
+        securityToken = null;
     }
 }

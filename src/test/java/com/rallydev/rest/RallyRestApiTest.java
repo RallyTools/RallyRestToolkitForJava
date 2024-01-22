@@ -43,17 +43,17 @@ public class RallyRestApiTest {
         Assert.assertTrue(apiKeyApi.getClient() instanceof ApiKeyClient);
     }
 
-//    public void shouldSetProxy() throws Exception {
-//        URI proxy = new URI("http://my.proxy.com:8000");
-//        api.setProxy(proxy);
-//        verify(api.client).setProxy(proxy);
-//    }
-//
-//    public void shouldSetProxyWithCredentials() throws Exception {
-//        URI proxy = new URI("http://my.proxy.com:8000");
-//        api.setProxy(proxy, "username", "password");
-//        verify(api.client).setProxy(proxy, "username", "password");
-//    }
+    public void shouldSetProxy() throws Exception {
+        URI proxy = new URI("http://my.proxy.com:8000");
+        api.setProxy(proxy);
+        verify(api.client).setProxy(proxy);
+    }
+
+    public void shouldSetProxyWithCredentials() throws Exception {
+        URI proxy = new URI("http://my.proxy.com:8000");
+        api.setProxy(proxy, "username", "password");
+        verify(api.client).setProxy(proxy, "username", "password");
+    }
 
     public void shouldSetVendor() throws Exception {
         api.setApplicationVendor("fooVendor");

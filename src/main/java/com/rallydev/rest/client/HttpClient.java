@@ -4,6 +4,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.AuthenticationStrategy;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
@@ -12,7 +13,9 @@ import org.apache.http.conn.params.ConnRoutePNames;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.ProxyAuthenticationStrategy;
 import org.apache.http.util.EntityUtils;
 
 import java.io.Closeable;
@@ -28,9 +31,12 @@ import java.util.Map;
 public class HttpClient
     implements Closeable {
 
-    protected URI server;
+    protected final URI server;
     protected String wsapiVersion = "v2.0";
     protected CloseableHttpClient client;
+    private String userName;
+    private String password;
+    private URI proxy;
 
     private enum Header {
         Library,
@@ -49,18 +55,26 @@ public class HttpClient
     };
 
     protected HttpClient(URI server) {
-        this.server = server;
-        client = HttpClients.custom().
-                setDefaultRequestConfig(getRequestConfig()).
-                build();
+        this(server, null, null);
     }
 
     protected HttpClient(URI server, String userName, String password) {
         this.server = server;
-        client = HttpClients.custom().
-                setDefaultRequestConfig(getRequestConfig()).
-                setDefaultCredentialsProvider(getCredentials(userName, password)).
-                build();
+        this.userName = userName;
+        this.password = password;
+        this.client = buildClient();
+    }
+
+    protected CloseableHttpClient buildClient() {
+        HttpClientBuilder builder = HttpClients.custom().
+            setDefaultRequestConfig(getRequestConfig());
+        if (userName != null && password != null) {
+            builder.setDefaultCredentialsProvider(getCredentials(userName, password));
+        }
+        if (proxy != null) {
+            builder.setProxy(new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        }
+        return builder.build();
     }
 
     private RequestConfig getRequestConfig() {
@@ -82,20 +96,35 @@ public class HttpClient
      * @param proxy The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
      */
     public void setProxy(URI proxy) {
-        client.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        setProxy(proxy, null, null);
     }
 
-//    /**
-//     * Set the authenticated proxy server to use.  By default no proxy is configured.
-//     *
-//     * @param proxy    The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
-//     * @param userName The username to be used for authentication.
-//     * @param password The password to be used for authentication.
-//     */
-//    public void setProxy(URI proxy, String userName, String password) {
-//        setProxy(proxy);
-//        setClientCredentials(proxy, userName, password);
-//    }
+    /**
+     * Set the authenticated proxy server to use.  By default no proxy is configured.
+     *
+     * @param proxy    The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
+     * @param userName The username to be used for authentication.
+     * @param password The password to be used for authentication.
+     */
+    public void setProxy(URI proxy, String userName, String password) {
+        closeClient();
+        this.proxy = proxy;
+        this.userName = userName;
+        this.password = password;
+        client = buildClient();
+    }
+
+    public URI getProxy() {
+        return proxy;
+    }
+
+    private void closeClient() {
+        try {
+            client.close();
+        } catch (Throwable t) {
+            throw new RuntimeException(t);
+        }
+    }
 
     /**
      * Set the value of the X-RallyIntegrationVendor header included on all requests.
