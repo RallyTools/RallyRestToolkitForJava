@@ -29,12 +29,12 @@ public class BasicAuthClientTest {
         this.client = spy(client);
     }
 
-//    @Test
-//    public void shouldIntialize() {
-//        Assert.assertEquals(client.getServer(), server);
-//        Assert.assertEquals(client.credentials.getPassword(), password);
-//        Assert.assertEquals(client.credentials.getUserPrincipal().getName(), userName);
-//    }
+    @Test
+    public void shouldIntialize() {
+        Assert.assertEquals(client.getServer(), server);
+        Assert.assertEquals(client.credentials.getPassword(), password);
+        Assert.assertEquals(client.credentials.getUserPrincipal().getName(), userName);
+    }
 
     @Test
     public void shouldNotIncludeCSRFTokenOnGet() throws Exception {
