@@ -27,17 +27,6 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>krmorse</id>
-            <name>Kyle Morse</name>
-        </developer>
-        <developer>
-            <id>kworam</id>
-            <name>Kevin Woram</name>
-        </developer>
-    </developers>
-
     <scm>
         <connection>scm:git:git@github.com:RallyTools/RallyRestToolkitForJava.git</connection>
         <developerConnection>scm:git:git@github.com:RallyTools/RallyRestToolkitForJava.git</developerConnection>
