@@ -2,15 +2,20 @@ package com.rallydev.rest.client;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
-import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.Credentials;
 import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.AuthenticationStrategy;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.config.CookieSpecs;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.*;
 import org.apache.http.conn.params.ConnRoutePNames;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DecompressingHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.ProxyAuthenticationStrategy;
 import org.apache.http.util.EntityUtils;
 
 import java.io.Closeable;
@@ -23,12 +28,15 @@ import java.util.Map;
  * A HttpClient implementation providing connectivity to Rally.  This class does not
  * provide any authentication on its own but instead relies on a concrete subclass to do so.
  */
-public class HttpClient extends DefaultHttpClient
+public class HttpClient
     implements Closeable {
 
-    protected URI server;
+    protected final URI server;
     protected String wsapiVersion = "v2.0";
-    protected DecompressingHttpClient client;
+    protected CloseableHttpClient client;
+    private String userName;
+    private String password;
+    private URI proxy;
 
     private enum Header {
         Library,
@@ -47,8 +55,39 @@ public class HttpClient extends DefaultHttpClient
     };
 
     protected HttpClient(URI server) {
+        this(server, null, null);
+    }
+
+    protected HttpClient(URI server, String userName, String password) {
         this.server = server;
-        client = new DecompressingHttpClient(this);
+        this.userName = userName;
+        this.password = password;
+        this.client = buildClient();
+    }
+
+    protected CloseableHttpClient buildClient() {
+        HttpClientBuilder builder = HttpClients.custom().
+            setDefaultRequestConfig(getRequestConfig());
+        if (userName != null && password != null) {
+            builder.setDefaultCredentialsProvider(getCredentials(userName, password));
+        }
+        if (proxy != null) {
+            builder.setProxy(new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        }
+        return builder.build();
+    }
+
+    private RequestConfig getRequestConfig() {
+        return RequestConfig.custom().
+                setCookieSpec(CookieSpecs.STANDARD).
+                build();
+    }
+
+    private CredentialsProvider getCredentials(String userName, String password) {
+        BasicCredentialsProvider provider = new BasicCredentialsProvider();
+        UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(userName, password);
+        provider.setCredentials( AuthScope.ANY, credentials);
+        return  provider;
     }
 
     /**
@@ -57,7 +96,7 @@ public class HttpClient extends DefaultHttpClient
      * @param proxy The proxy server, e.g. {@code new URI("http://my.proxy.com:8000")}
      */
     public void setProxy(URI proxy) {
-        this.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, new HttpHost(proxy.getHost(), proxy.getPort(), proxy.getScheme()));
+        setProxy(proxy, null, null);
     }
 
     /**
@@ -68,8 +107,23 @@ public class HttpClient extends DefaultHttpClient
      * @param password The password to be used for authentication.
      */
     public void setProxy(URI proxy, String userName, String password) {
-        setProxy(proxy);
-        setClientCredentials(proxy, userName, password);
+        closeClient();
+        this.proxy = proxy;
+        this.userName = userName;
+        this.password = password;
+        client = buildClient();
+    }
+
+    public URI getProxy() {
+        return proxy;
+    }
+
+    private void closeClient() {
+        try {
+            client.close();
+        } catch (Throwable t) {
+            throw new RuntimeException(t);
+        }
     }
 
     /**
@@ -154,13 +208,14 @@ public class HttpClient extends DefaultHttpClient
      *                     problem occurs while executing the request
      */
     protected String executeRequest(HttpRequestBase request) throws IOException {
-        HttpResponse response = client.execute(request);
-        HttpEntity entity = response.getEntity();
-        if (response.getStatusLine().getStatusCode() == 200) {
-            return EntityUtils.toString(entity, "utf-8");
-        } else {
-            EntityUtils.consumeQuietly(entity);
-            throw new IOException(response.getStatusLine().toString());
+        try (CloseableHttpResponse response = client.execute(request)) {
+            HttpEntity entity = response.getEntity();
+            if (response.getStatusLine().getStatusCode() == 200) {
+                return EntityUtils.toString(entity, "utf-8");
+            } else {
+                EntityUtils.consumeQuietly(entity);
+                throw new IOException(response.getStatusLine().toString());
+            }
         }
     }
 
@@ -223,17 +278,13 @@ public class HttpClient extends DefaultHttpClient
 
     /**
      * Release all resources associated with this instance.
-     *
-     * @throws IOException if an error occurs releasing resources
      */
-    public void close() throws IOException {
-        client.getConnectionManager().shutdown();
-    }
-
-    protected Credentials setClientCredentials(URI server, String userName, String password) {
-        UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(userName, password);
-        this.getCredentialsProvider().setCredentials(new AuthScope(server.getHost(), server.getPort()), credentials);
-        return credentials;
+    public void close() {
+        try {
+            client.close();
+        } catch (Throwable t) {
+            throw new RuntimeException(t);
+        }
     }
 
     /**
